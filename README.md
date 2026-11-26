@@ -64,7 +64,7 @@ git push -u origin main
   - **Ethical Hire** (CodeIgniter 4 job & subscription portal)
   - **Patelco Credit Union** (Angular Home Equity loan calculator & WordPress)
   - **Wellness & Health 4 All** (React JS platform)
-  - **TRLIT Solutions Mail App** (Next JS SSR email client)
+  - **TRLIT Solutions** (Next JS Enterprise Platform)
   - **SparknFly** (Canadian dispensary with custom PHP admin)
   - **WebRX Pharma** (UK pharmacy & prescription system)
   - **La Fleur De Luxe** (Luxury eCommerce)
