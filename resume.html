@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhumika Patel - Senior Software Engineer Resume</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    :root {
+      --burgundy: #8B1D34;
+      --burgundy-hover: #701427;
+      --mceblack: #111111;
+      --espresso: #2B201D;
+      --espresso-muted: #665C58;
+      --olive: #556B2F;
+      --champagne: #FAF5ED;
+      --taupe: #E2D8CC;
+      --white: #FFFFFF;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background-color: var(--champagne);
+      color: var(--espresso);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 24px 16px;
+    }
+
+    /* Print Controls Bar */
+    .controls-bar {
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: var(--white);
+      padding: 14px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--taupe);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    
+    .btn-primary {
+      background-color: var(--burgundy);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background-color: var(--burgundy-hover);
+    }
+    
+    .btn-secondary {
+      background-color: var(--champagne);
+      color: var(--espresso);
+      border: 1px solid var(--taupe);
+    }
+    .btn-secondary:hover {
+      border-color: var(--burgundy);
+      color: var(--burgundy);
+    }
+
+    /* Resume Document Canvas */
+    .resume-canvas {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--white);
+      padding: 44px 48px;
+      border-radius: 16px;
+      border: 1px solid var(--taupe);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    /* Header */
+    .resume-header {
+      text-align: center;
+      border-bottom: 2px solid var(--burgundy);
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+    }
+    
+    .candidate-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--burgundy);
+      letter-spacing: -0.5px;
+    }
+    
+    .candidate-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--mceblack);
+      margin-top: 4px;
+    }
+    
+    .contact-row {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      font-size: 12.5px;
+      color: var(--espresso-muted);
+    }
+    
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--espresso);
+      text-decoration: none;
+    }
+    .contact-item:hover {
+      color: var(--burgundy);
+    }
+
+    /* Section Styling */
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--burgundy);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1.5px solid var(--taupe);
+      padding-bottom: 4px;
+      margin-top: 22px;
+      margin-bottom: 12px;
+    }
+
+    /* Content Typography */
+    p.summary-text {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--espresso);
+      text-align: justify;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 13px;
+    }
+    .skill-category {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 8px;
+      align-items: baseline;
+    }
+    .skill-cat-title {
+      font-weight: 600;
+      color: var(--mceblack);
+    }
+    .skill-cat-content {
+      color: var(--espresso);
+    }
+
+    /* Experience */
+    .exp-item {
+      margin-bottom: 16px;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    .exp-role {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--mceblack);
+    }
+    .exp-company {
+      font-weight: 600;
+      color: var(--burgundy);
+    }
+    .exp-location {
+      font-size: 12.5px;
+      color: var(--espresso-muted);
+      font-style: italic;
+    }
+    .exp-period {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--burgundy);
+      background: #faf0f2;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    
+    ul.bullet-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    ul.bullet-list li {
+      margin-bottom: 4px;
+    }
+    ul.bullet-list li strong {
+      color: var(--mceblack);
+    }
+
+    /* Projects Grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .project-box {
+      border: 1px solid var(--taupe);
+      border-radius: 8px;
+      padding: 10px 14px;
+      background: #FDFAF6;
+    }
+    .proj-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 3px;
+    }
+    .proj-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--mceblack);
+    }
+    .proj-link {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--burgundy);
+      text-decoration: none;
+    }
+    .proj-link:hover {
+      text-decoration: underline;
+    }
+    .proj-tech {
+      font-size: 11.5px;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--espresso-muted);
+      margin-bottom: 4px;
+    }
+    .proj-tech strong {
+      color: var(--olive);
+    }
+    .proj-desc {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: var(--espresso);
+    }
+
+    /* Education */
+    .edu-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .edu-degree {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--mceblack);
+    }
+    .edu-college {
+      font-size: 13px;
+      color: var(--espresso-muted);
+    }
+    .edu-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--burgundy);
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #fff !important;
+        padding: 0 !important;
+      }
+      .controls-bar {
+        display: none !important;
+      }
+      .resume-canvas {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .project-box {
+        page-break-inside: avoid;
+      }
+      .exp-item {
+        page-break-inside: avoid;
+      }
+      .section-title {
+        page-break-after: avoid;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+      .proj-link {
+        color: var(--burgundy) !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .resume-canvas {
+        padding: 24px 18px;
+      }
+      .skill-category {
+        grid-template-columns: 1fr;
+      }
+      .exp-header, .edu-box {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Controls Bar -->
+  <div class="controls-bar">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <a href="index.html" class="btn btn-secondary">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Portfolio</span>
+      </a>
+      <span style="font-size: 12px; color: var(--espresso-muted);">| Bhumika Patel Resume (20 Projects)</span>
+    </div>
+    
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <button onclick="window.print()" class="btn btn-secondary">
+        <i class="fa-solid fa-print"></i>
+        <span>Print</span>
+      </button>
+      <a href="./Bhumika_Patel_Senior_Software_Engineer_Resume.docx" download="Bhumika_Patel_Senior_Software_Engineer_Resume.docx" class="btn btn-secondary">
+        <i class="fa-solid fa-file-word text-blue-600"></i>
+        <span>Download Word (.DOCX)</span>
+      </a>
+      <a href="./Bhumika_Patel_Senior_Software_Engineer_Resume.pdf" download="Bhumika_Patel_Senior_Software_Engineer_Resume.pdf" class="btn btn-primary">
+        <i class="fa-solid fa-file-pdf"></i>
+        <span>Download PDF</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Resume Canvas -->
+  <main class="resume-canvas">
+    
+    <!-- Header -->
+    <header class="resume-header">
+      <h1 class="candidate-name">BHUMIKA PATEL</h1>
+      <div class="candidate-title">Senior Software Engineer &bull; Full-Stack & eCommerce Solutions</div>
+      
+      <div class="contact-row">
+        <a href="tel:+918780432116" class="contact-item">
+          <i class="fa-solid fa-phone text-xs"></i>
+          <span>+91-8780432116</span>
+        </a>
+        <span>&bull;</span>
+        <a href="mailto:bhumikapatel8511@gmail.com" class="contact-item">
+          <i class="fa-solid fa-envelope text-xs"></i>
+          <span>bhumikapatel8511@gmail.com</span>
+        </a>
+        <span>&bull;</span>
+        <a href="https://bhumika081.github.io/portfolio/" target="_blank" class="contact-item">
+          <i class="fa-solid fa-globe text-xs"></i>
+          <span>bhumika081.github.io/portfolio</span>
+        </a>
+        <span>&bull;</span>
+        <a href="https://github.com/bhumika081" target="_blank" class="contact-item">
+          <i class="fa-brands fa-github text-xs"></i>
+          <span>github.com/bhumika081</span>
+        </a>
+        <span>&bull;</span>
+        <a href="https://www.linkedin.com/in/bhumika-patel" target="_blank" class="contact-item">
+          <i class="fa-brands fa-linkedin text-xs"></i>
+          <span>LinkedIn</span>
+        </a>
+        <span>&bull;</span>
+        <span class="contact-item">
+          <i class="fa-solid fa-location-dot text-xs"></i>
+          <span>Ahmedabad, India</span>
+        </span>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Senior Software Engineer with <strong>4+ years of hands-on experience</strong> engineering scalable web applications, published Shopify App Store solutions, and robust enterprise platforms. Deep expertise in modern frontend frameworks (<strong>React.js, Next.js, Angular, TypeScript</strong>), high-performance backend systems (<strong>PHP, CodeIgniter 4, Node.js, RESTful APIs</strong>), enterprise eCommerce (<strong>Shopify App Bridge & Polaris, Magento 2, WooCommerce</strong>), and automated workflow pipelines (<strong>n8n, GoHighLevel CRM</strong>). Proven track record successfully delivering <strong>20 commercial web platforms across 6 international markets</strong> (USA, UK, Australia, Germany, Ireland, and India) with strict adherence to WCAG 2.1 accessibility, clean modular architecture, and sub-second page performance benchmarks.
+      </p>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <h2 class="section-title">Core Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <span class="skill-cat-title">Frontend Technologies</span>
+          <span class="skill-cat-content">React.js, Next.js (SSR / SSG / App Router), Angular 12+, TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap 5, SASS/SCSS, AJAX, Responsive UI/UX</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-cat-title">Backend & Frameworks</span>
+          <span class="skill-cat-content">PHP (7.4 – 8.3), CodeIgniter 4, Node.js, Express, RESTful API Engineering, MVC Architecture, Role-Based Access Control (RBAC), Object-Oriented Programming (OOP)</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-cat-title">eCommerce & CMS Platforms</span>
+          <span class="skill-cat-content">Shopify App Development (App Bridge, Polaris UI, GraphQL Admin API, Liquid), Magento 2 (CE/EE, Custom Modules, Catalog Sync), WooCommerce, WordPress (Custom Themes, Plugins, ACF Pro, Gutenberg)</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-cat-title">Databases & Infrastructure</span>
+          <span class="skill-cat-content">MySQL, PostgreSQL, Database Schema Design, Query Optimization & Indexing, Git, GitHub, Vercel, cPanel, Apache, Nginx</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-cat-title">APIs, Payments & Automations</span>
+          <span class="skill-cat-content">Stripe API & Subscriptions, PayPal, OpenAI API, Google Maps Platform, Twilio, Bookly API, n8n Workflow Automations, GoHighLevel (GHL) CRM, Klaviyo</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-cat-title">Tools & Methodologies</span>
+          <span class="skill-cat-content">Agile/Scrum, Full SDLC Management, Postman, VS Code, Asana, Jira, Slack, Cross-Browser Compatibility, WCAG 2.1 Accessibility</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section>
+      <h2 class="section-title">Professional Work Experience</h2>
+      
+      <!-- Experience 1 -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">Senior Software Engineer</span> &bull; 
+            <span class="exp-company">Webile Technologies Pvt. Ltd</span>
+            <span class="exp-location">&mdash; Ahmedabad, India</span>
+          </div>
+          <span class="exp-period">July 2022 &ndash; Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Full-Stack Architecture:</strong> Architect, develop, and maintain enterprise web applications, high-traffic eCommerce storefronts, and custom portals for international clients across US, UK, Australia, Germany, and Ireland.</li>
+          <li><strong>Shopify App Development:</strong> Engineered and published <em>ShopPilot AI</em> on the official Shopify App Store utilizing Shopify App Bridge, Polaris UI, Node.js, and OpenAI API, delivering automated merchant inventory and catalog optimization.</li>
+          <li><strong>Enterprise Magento & eCommerce:</strong> Directed custom module development and payment gateway integrations for enterprise Magento 2 systems (Tesselaar Flowers Australia, DigiHorizon Store) and WooCommerce platforms (Maguire Supplies Ireland, La Fleur De Luxe USA).</li>
+          <li><strong>Frontend Engineering:</strong> Developed high-speed single-page applications and interactive financial calculators in Angular 12+ and React.js for financial cooperatives (Patelco Credit Union) and wellness providers (Wellness & Health 4 All), achieving 98+ Google Lighthouse scores.</li>
+          <li><strong>Workflow Automations & APIs:</strong> Designed automated webhook pipelines integrating web platforms with n8n workflow engines, GoHighLevel CRM, Stripe subscription billing, and multi-tier fulfillment systems.</li>
+          <li><strong>Mentorship & Code Quality:</strong> Enforce Git code review standards, optimize MySQL schemas and query execution plans, and mentor junior developers in clean code practices.</li>
+        </ul>
+      </div>
+
+      <!-- Experience 2 -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <span class="exp-role">PHP Developer</span> &bull; 
+            <span class="exp-company">LIOM IT Hub Pvt. Ltd</span>
+            <span class="exp-location">&mdash; Ahmedabad, India</span>
+          </div>
+          <span class="exp-period">May 2021 &ndash; December 2021</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Backend Engineering:</strong> Engineered backend business logic, database controllers, and MySQL schemas for custom web applications using PHP and MVC architecture.</li>
+          <li><strong>Access Control & Admin Portals:</strong> Implemented secure role-based access control (RBAC), user session management, dynamic AJAX data filtering, and administrative management dashboards.</li>
+          <li><strong>Custom CMS Development:</strong> Developed bespoke WordPress themes from scratch and engineered customized plugins utilizing Advanced Custom Fields (ACF) to support dynamic client requirements.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Comprehensive Projects Directory (All 20 Projects) -->
+    <section>
+      <h2 class="section-title">Production Projects Portfolio (All 20 Live Applications)</h2>
+      
+      <div class="project-grid">
+
+        <!-- 1. ShopPilot AI -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">1. ShopPilot AI (Official Shopify App Store)</span>
+            <a href="https://apps.shopify.com/shoppilot-ai-1" target="_blank" class="proj-link">apps.shopify.com &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> Shopify App Bridge, Polaris UI, Node.js, React, OpenAI API, GraphQL Admin API</div>
+          <div class="proj-desc">Published official Shopify application automating product copy, SEO tagging, and smart inventory suggestions. Integrated App Bridge embedded authentication, webhook subscriptions, and recurring subscription billing.</div>
+        </div>
+
+        <!-- 2. Tesselaar Flowers -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">2. Tesselaar Flowers (Australia)</span>
+            <a href="https://www.tesselaar.net.au/" target="_blank" class="proj-link">tesselaar.net.au &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> Magento 2 Enterprise eCommerce, Custom PHP Modules, B2B/B2C Checkout, ERP Sync</div>
+          <div class="proj-desc">Australia's premier flower nursery portal. Architected custom catalog sync for thousands of seasonal bulb SKUs, pre-order reservation logic, complex Australian shipping matrix calculation, and automated inventory reconciliation.</div>
+        </div>
+
+        <!-- 3. DigiHorizon Store -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">3. DigiHorizon Store (India)</span>
+            <a href="https://store.digihorizon.in/" target="_blank" class="proj-link">store.digihorizon.in &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> Magento 2 eCommerce, MySQL, Payment Gateways, High-Performance Caching</div>
+          <div class="proj-desc">Enterprise digital goods and electronics commercial marketplace. Built multi-category product catalog, secure payment gateways, warranty registration system, and Redis caching for sub-second page loads.</div>
+        </div>
+
+        <!-- 4. Patelco Credit Union Calculator -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">4. Patelco Credit Union &ndash; Home Equity & Loan Calculator (USA)</span>
+            <a href="https://www.patelco.org/" target="_blank" class="proj-link">patelco.org &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> Angular 12+, TypeScript, Reactive Forms, Financial Algorithms, CSS3</div>
+          <div class="proj-desc">Interactive financial loan calculation suite for 300,000+ member California credit union. Implemented dynamic monthly payment sliders, amortization projection graphs, and seamless lead handoff to loan officers.</div>
+        </div>
+
+        <!-- 5. Patelco Credit Union Portal -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">5. Patelco Credit Union &ndash; Enterprise Banking Portal (USA)</span>
+            <a href="https://www.patelco.org/" target="_blank" class="proj-link">patelco.org &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> WordPress Enterprise, Advanced Custom Fields (ACF Pro), Bookly API, WCAG 2.1</div>
+          <div class="proj-desc">Large-scale enterprise banking web portal. Built bespoke custom Gutenberg blocks, branch appointment scheduling integration, ADA/WCAG 2.1 accessibility compliance, and high-availability WordPress architecture.</div>
+        </div>
+
+        <!-- 6. Ethical Hire -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">6. Ethical Hire (Australia)</span>
+            <a href="https://ethicalhire.com.au/" target="_blank" class="proj-link">ethicalhire.com.au &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> CodeIgniter 4 (PHP), MySQL, Stripe API Subscriptions, Google Maps API</div>
+          <div class="proj-desc">Comprehensive Australian recruitment marketplace. Developed multi-tenant RBAC (Candidates, Employers, Admins), recurring monthly Stripe subscription billing, geolocation radius search, and applicant tracking workflows.</div>
+        </div>
+
+        <!-- 7. TRLIT Solutions -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">7. TRLIT Solutions (Global Enterprise)</span>
+            <a href="https://trlit.com/" target="_blank" class="proj-link">trlit.com &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> Next.js, React, Node.js API, Server-Side Rendering (SSR), Tailwind CSS</div>
+          <div class="proj-desc">Enterprise cloud IT solutions platform. Built scalable Next.js architecture with SSR for rapid content delivery, dynamic capability showcase, and automated lead capture pipelines.</div>
+        </div>
+
+        <!-- 8. The Spa of Charleston -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">8. The Spa of Charleston (USA)</span>
+            <a href="https://www.thespaofcharleston.com/" target="_blank" class="proj-link">thespaofcharleston.com &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> WordPress, Custom PHP, ACF Pro, Appointment Booking Engine, eCommerce</div>
+          <div class="proj-desc">Historic South Carolina luxury wellness portal. Engineered online treatment discovery menu, custom appointment scheduling workflow, instant gift certificate generation, and secure checkout.</div>
+        </div>
+
+        <!-- 9. Ausstellungen - Gitta Marquardt-Baladurage -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">9. Ausstellungen &ndash; Gitta Marquardt-Baladurage (Germany)</span>
+            <a href="https://gitta-marquardt-baladurage.de/ausstellungen/" target="_blank" class="proj-link">gitta-marquardt-baladurage.de &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> WordPress, Custom PHP Theme, Fine Arts Archive, Responsive UI</div>
+          <div class="proj-desc">German contemporary fine arts and retrospective exhibition platform. Engineered curated art gallery archives, chronological exhibition timelines, and bilingual high-resolution responsive layout.</div>
+        </div>
+
+        <!-- 10. My Jewellery Story -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">10. My Jewellery Story (Australia)</span>
+            <a href="https://www.myjewellerystory.com.au/" target="_blank" class="proj-link">myjewellerystory.com.au &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> Shopify Liquid, Custom JavaScript/CSS, High-Res Zoom, Klaviyo</div>
+          <div class="proj-desc">Australian luxury jewelry eCommerce. Engineered high-resolution gemstone magnification viewer, real-time metal/stone variant swatches, and high-converting cart drawer upsells.</div>
+        </div>
+
+        <!-- 11. Fashion Jewellery Hub -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">11. Fashion Jewellery Hub (Australia)</span>
+            <a href="https://fashionjewelleryhub.myshopify.com/" target="_blank" class="proj-link">fashionjewelleryhub.myshopify.com &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> Shopify Theme Architecture, AJAX Filtering, Quick-Buy Drawer</div>
+          <div class="proj-desc">High-velocity lifestyle fashion jewelry brand. Implemented instant AJAX facet search by metal, price, and occasion, optimized 1-click mobile checkout, and live Instagram feed integration.</div>
+        </div>
+
+        <!-- 12. Halal 4 All Shop -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">12. Halal 4 All Shop (UK / Global)</span>
+            <a href="https://halal4allshop.com/" target="_blank" class="proj-link">halal4allshop.com &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> Shopify Liquid, Storefront API, Local Delivery Slots, Payment Gateways</div>
+          <div class="proj-desc">International Halal food and grocery eCommerce. Built multi-region currency conversions, local zip-code delivery scheduler, cold-storage shipping rules, and payment gateways.</div>
+        </div>
+
+        <!-- 13. Maguire Supplies -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">13. Maguire Supplies (Ireland)</span>
+            <a href="https://maguiresupplies.com/" target="_blank" class="proj-link">maguiresupplies.com &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> WooCommerce, Custom PHP, B2B Wholesale Pricing, EU VAT Engine</div>
+          <div class="proj-desc">Irish industrial supplies and hardware portal. Developed B2B wholesale portal with approved trade logins, tiered bulk volume discounts, automated EU VAT validation, and PDF invoice generation.</div>
+        </div>
+
+        <!-- 14. Retail Matchmaker -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">14. Retail Matchmaker (USA)</span>
+            <a href="https://retailmatchmaker.com/" target="_blank" class="proj-link">retailmatchmaker.com &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> Full-Stack Web App, PHP, MySQL, Brand-Retailer Match Engine</div>
+          <div class="proj-desc">B2B matchmaking platform connecting emerging consumer brands with nationwide department stores and buyers. Features custom application vetting forms, direct messaging, and buyer discovery filters.</div>
+        </div>
+
+        <!-- 15. SparknFly -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">15. SparknFly (Canada)</span>
+            <a href="https://sparknfly.ca/" target="_blank" class="proj-link">sparknfly.ca &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> WordPress, Custom PHP Admin Dashboard, Role-Based Access Control</div>
+          <div class="proj-desc">Licensed Canadian dispensary platform (21+). Designed custom PHP backend dashboard for dispensary operators, age verification gateway, real-time inventory counts, and AJAX product filtering.</div>
+        </div>
+
+        <!-- 16. WebRX Pharma -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">16. WebRX Pharma (UK)</span>
+            <a href="https://webrx.co.uk/" target="_blank" class="proj-link">webrx.co.uk &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> WordPress, HIPAA/GDPR Compliance, Prescription Intake Engine</div>
+          <div class="proj-desc">Regulated UK digital pharmacy. Developed secure multi-step clinical health questionnaire, doctor approval authorization queue, electronic prescription dispensing states, and discreet packaging options.</div>
+        </div>
+
+        <!-- 17. La Fleur De Luxe -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">17. La Fleur De Luxe (USA)</span>
+            <a href="https://lafleurdeluxe.com/" target="_blank" class="proj-link">lafleurdeluxe.com &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> WordPress / WooCommerce, Custom Box Configurator, Stripe Checkout</div>
+          <div class="proj-desc">Luxury preserved rose florist. Engineered bespoke arrangement visualizer (box shape, lid finish, floral arrangement, custom embossed greeting cards), and streamlined checkout.</div>
+        </div>
+
+        <!-- 18. Wellness & Health 4 All -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">18. Wellness & Health 4 All (USA)</span>
+            <a href="https://wellnessandhealth4all.com/" target="_blank" class="proj-link">wellnessandhealth4all.com &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> React.js, Tailwind CSS, REST APIs, Context API State Management</div>
+          <div class="proj-desc">Mindfulness retreat and wellness event booking platform. Built retreat discovery explorer with multi-criteria filtering, instructor bio modal showcases, and dynamic registration workflows.</div>
+        </div>
+
+        <!-- 19. Javia International -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">19. Javia International (Global Export)</span>
+            <a href="https://javiainternational.com/" target="_blank" class="proj-link">javiainternational.com &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> WordPress, Custom PHP Theme, Multilingual Architecture, SEO Optimization</div>
+          <div class="proj-desc">Global corporate import/export trade portal. Engineered multi-category industrial product directory, multilingual localization, RFP quotation request workflow, and international SEO foundation.</div>
+        </div>
+
+        <!-- 20. NVD Technology -->
+        <div class="project-box">
+          <div class="proj-top">
+            <span class="proj-title">20. NVD Technology (USA)</span>
+            <a href="https://nvdtechnology.com/" target="_blank" class="proj-link">nvdtechnology.com &nearr;</a>
+          </div>
+          <div class="proj-tech"><strong>Stack:</strong> WordPress, Custom CSS, Interactive Service Matrices, Lead Funnel</div>
+          <div class="proj-desc">Corporate IT consulting and technology advisory website. Features interactive service solution matrices, customer case study spotlights, and integrated CRM inquiry pipelines.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2 class="section-title">Education & Academic Background</h2>
+      <div class="edu-box">
+        <div>
+          <div class="edu-degree">Bachelor of Engineering (B.E.) in Computer Engineering</div>
+          <div class="edu-college">Apollo Institute of Engineering and Technology &bull; Gujarat Technological University (GTU)</div>
+        </div>
+        <div class="edu-year">Graduated: 2020</div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
