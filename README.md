@@ -56,7 +56,7 @@ git push -u origin main
   - **Halal 4 All Shop** (Halal Certified Food & Grocery eCommerce)
   - **My Jewellery Story** (Luxury Gemstones & Fine Jewelry, Australia)
   - **Fashion Jewellery Hub** (Trendy Lifestyle & Jewelry Shopify Storefront)
-  - **Tesselaar Flowers** (Australia eCommerce)
+  - **Tesselaar Flowers** (Australia Magento eCommerce Portal)
   - **Maguire Supplies** (Ireland eCommerce)
   - **Javia International** (Global corporate export portal)
   - **NVD Technology** (Consulting & digital services)
