@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhumika Patel | Senior Software Engineer & Full-Stack Specialist</title>
+  <meta name="description" content="Portfolio of Bhumika Patel - Software Engineer with 4+ years of experience in React, Next.js, Angular, Shopify Apps, WordPress, and PHP." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#312e81',
+            },
+            accent: {
+              teal: '#0d9488',
+              cyan: '#06b6d4',
+              emerald: '#10b981',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom subtle glass and glow effects */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(229, 231, 235, 0.8);
+    }
+    .dark .glass-card {
+      background: rgba(17, 24, 39, 0.75);
+      border: 1px solid rgba(55, 65, 81, 0.6);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 50%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .blob-bg {
+      position: absolute;
+      filter: blur(80px);
+      z-index: 0;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white transition-colors duration-300">
+
+  <!-- Ambient Gradient Blobs -->
+  <div class="blob-bg w-96 h-96 bg-brand-500 top-10 left-10 rounded-full"></div>
+  <div class="blob-bg w-96 h-96 bg-accent-cyan top-96 right-10 rounded-full"></div>
+  <div class="blob-bg w-96 h-96 bg-accent-emerald bottom-10 left-1/3 rounded-full"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200/80 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-accent-cyan to-accent-emerald flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+          BP
+        </div>
+        <div class="leading-tight">
+          <span class="block font-bold text-base tracking-tight text-slate-900 dark:text-white">Bhumika Patel</span>
+          <span class="block text-xs font-medium text-slate-500 dark:text-slate-400">Software Engineer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600 dark:text-slate-300">
+        <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Projects</a>
+        <a href="#pricing" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Freelance Pricing</a>
+        <a href="#experience" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Experience</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon dark:hidden"></i>
+          <i class="fa-solid fa-sun hidden dark:inline"></i>
+        </button>
+
+        <!-- Direct Contact Button -->
+        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold shadow-sm hover:shadow-md transition-all">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Let's Talk</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="about" class="relative pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <!-- Availability Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Available for Freelance & Full-Stack Projects
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+          Architecting High-Impact <span class="gradient-text">Web Applications</span>, Custom CMS & Shopify Apps.
+        </h1>
+
+        <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+          I am a <strong>Senior Software Engineer</strong> with <strong>4+ years of professional experience</strong> turning complex business requirements into fast, scalable, and responsive digital products. From <strong>AI-powered Shopify apps</strong> to <strong>multinational eCommerce</strong> and <strong>enterprise web portals</strong>, I deliver clean code that drives real business results.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#projects" class="px-6 py-3.5 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-sm shadow-md hover:bg-slate-800 dark:hover:bg-slate-100 hover:-translate-y-0.5 transition-all flex items-center gap-2">
+            <span>Explore My Work</span>
+            <i class="fa-solid fa-arrow-down text-xs"></i>
+          </a>
+          <a href="#pricing" class="px-6 py-3.5 rounded-xl bg-brand-50 text-brand-700 dark:bg-brand-950/70 dark:text-brand-300 border border-brand-200 dark:border-brand-800 font-bold text-sm hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-all flex items-center gap-2">
+            <i class="fa-solid fa-tags text-xs"></i>
+            <span>Freelance Pricing Plans</span>
+          </a>
+          <a href="mailto:bhumikapatel8511@gmail.com" class="px-6 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold text-sm hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center gap-2">
+            <i class="fa-regular fa-envelope text-xs"></i>
+            <span>Email Me</span>
+          </a>
+        </div>
+
+        <!-- Contact Quick Links -->
+        <div class="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center gap-6 text-sm text-slate-600 dark:text-slate-400">
+          <a href="tel:+918780432116" class="flex items-center gap-2 hover:text-brand-600 dark:hover:text-brand-400">
+            <i class="fa-solid fa-phone text-brand-600"></i>
+            <span>+91-8780432116</span>
+          </a>
+          <a href="mailto:bhumikapatel8511@gmail.com" class="flex items-center gap-2 hover:text-brand-600 dark:hover:text-brand-400">
+            <i class="fa-solid fa-envelope text-brand-600"></i>
+            <span>bhumikapatel8511@gmail.com</span>
+          </a>
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-brand-600"></i>
+            <span>India (Working with Global Clients)</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= METRICS / STATS ================= -->
+  <section class="py-8 bg-white/60 dark:bg-slate-900/60 border-y border-slate-200/80 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="p-4">
+          <div class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 dark:text-white">4+ Years</div>
+          <div class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Professional Experience</div>
+        </div>
+        <div class="p-4">
+          <div class="text-3xl sm:text-4xl font-extrabold font-display text-brand-600 dark:text-brand-400">15+ Projects</div>
+          <div class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Shipped Worldwide</div>
+        </div>
+        <div class="p-4">
+          <div class="text-3xl sm:text-4xl font-extrabold font-display text-accent-cyan">5+ Countries</div>
+          <div class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">US, UK, AU, IE & India</div>
+        </div>
+        <div class="p-4">
+          <div class="text-3xl sm:text-4xl font-extrabold font-display text-accent-emerald">100%</div>
+          <div class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Dedicated Client Delivery</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS MATRIX ================= -->
+  <section id="skills" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Tech Stack & Mastery</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Comprehensive Technical Toolkit</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-400">Specialized in modern JavaScript frameworks, robust PHP architecture, e-commerce engines, and high-performance CMS solutions.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Frontend -->
+        <div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-950/80 text-brand-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-brands fa-react"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Modern Frontend</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Fast, responsive & component-driven user interfaces</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">React JS</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Next JS (SSR/SSG)</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Angular</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JavaScript ES6+</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Bootstrap / Tailwind</span>
+          </div>
+        </div>
+
+        <!-- Backend & Frameworks -->
+        <div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-950/80 text-purple-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-brands fa-php"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Backend & MVC</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Robust architecture, databases & business logic</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">PHP 8+</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CodeIgniter 4</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MySQL Database</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">RESTful APIs</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MVC Architecture</span>
+          </div>
+        </div>
+
+        <!-- eCommerce & Shopify -->
+        <div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-brands fa-shopify"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">eCommerce & Shopify</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">High-converting stores & custom extensions</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Shopify App Dev</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">AI Integration</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">WooCommerce</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Magento</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Stripe Payments</span>
+          </div>
+        </div>
+
+        <!-- CMS & Optimization -->
+        <div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-cyan-100 dark:bg-cyan-950/80 text-cyan-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-brands fa-wordpress"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">WordPress & Performance</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">Custom theme/plugin dev & speed tuning</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Custom Themes</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Custom Plugins</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">ACF Pro</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Speed Optimization</span>
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Git / Postman</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED PROJECTS ================= -->
+  <section id="projects" class="py-20 bg-slate-100/70 dark:bg-slate-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Portfolio</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-1">Featured Production Projects</h2>
+          <p class="text-slate-600 dark:text-slate-400 mt-2 max-w-xl">A curated selection of live applications, international eCommerce stores, and custom software I've engineered.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="mt-6 md:mt-0 flex flex-wrap gap-2" id="filterContainer">
+          <button class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-brand-600 text-white shadow-sm" data-filter="all">All (12)</button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700" data-filter="shopify">Shopify & eCommerce</button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700" data-filter="react">React & Next.js</button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700" data-filter="wordpress">WordPress & PHP</button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700" data-filter="portal">Enterprise & Portals</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
+
+        <!-- 1. ShopPilot AI -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="shopify react">
+          <div class="h-44 bg-gradient-to-tr from-emerald-600 via-teal-600 to-cyan-500 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-solid fa-sparkles text-amber-300"></i> AI Shopify App
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">ShopPilot AI</h3>
+              <p class="text-xs text-white/90">Official Shopify App Store Listing</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Engineered an AI-powered Shopify merchant assistant app published on the official Shopify App Store. Built to streamline store management, optimize product listings, and automate workflows.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300">Shopify App Bridge</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300">React Polaris UI</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300">AI / LLM API</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300">Webhooks</span>
+              </div>
+            </div>
+            <a href="https://apps.shopify.com/shoppilot-ai-1" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-600 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>View on Shopify App Store</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Tesselaar Flowers -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="shopify wordpress">
+          <div class="h-44 bg-gradient-to-tr from-pink-600 via-rose-500 to-amber-500 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-solid fa-cart-shopping"></i> Wholesale & Retail (AU)
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">Tesselaar Flowers</h3>
+              <p class="text-xs text-white/90">Australia’s Leading Flower Wholesaler</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Developed an eCommerce solution for Australia’s premier flower grower and supplier. Implemented dynamic inventory displays, multi-tier product browsing, and ultra-fast mobile catalog browsing.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">eCommerce</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Speed Optimization</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Custom Filtering</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Australia (.au)</span>
+              </div>
+            </div>
+            <a href="https://tesselaarflowers.au/" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-rose-600 hover:text-white dark:hover:bg-rose-600 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>Visit Live Website</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Maguire Supplies -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="shopify wordpress">
+          <div class="h-44 bg-gradient-to-tr from-amber-600 via-orange-600 to-yellow-500 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-solid fa-tractor"></i> Hardware & Farm Store (IE)
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">Maguire Supplies</h3>
+              <p class="text-xs text-white/90">Agricultural & Hardware Supplies (Ireland)</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Engineered an eCommerce storefront for agricultural machinery, hardware, and farm parts with category/specification filtering, regional European tax calculations, and secure checkout.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">WooCommerce</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Custom PHP</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Stripe / PayPal</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Ireland (.ie)</span>
+              </div>
+            </div>
+            <a href="https://maguiresupplies.ie" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>Visit Live Website</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Javia International -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="wordpress portal">
+          <div class="h-44 bg-gradient-to-tr from-blue-700 via-indigo-600 to-cyan-600 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-solid fa-globe"></i> Global Trade & Export
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">Javia International</h3>
+              <p class="text-xs text-white/90">Multinational Export & Trading Platform</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Built an international business portal showcasing global product catalogues, export capabilities, interactive lead inquiries, and localized search optimization for international buyers.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">WordPress CMS</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Custom ACF</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Lead Funnels</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SEO Schema</span>
+              </div>
+            </div>
+            <a href="https://javiainternational.com/" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>Visit Live Website</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. NVD Technology -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="react portal">
+          <div class="h-44 bg-gradient-to-tr from-slate-900 via-purple-900 to-indigo-700 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-solid fa-laptop-code"></i> Tech & Consulting
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">NVD Technology</h3>
+              <p class="text-xs text-white/90">IT Consulting & Digital Solutions</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Created a modern, high-performance corporate platform presenting enterprise software engineering, cloud services, and consultation workflows with sleek animations and responsive UI.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Modern Frontend</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Interactive UI</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Core Web Vitals</span>
+              </div>
+            </div>
+            <a href="https://nvdtechnology.com/" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-600 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>Visit Live Website</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. Ethical Hire (Australia) -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="portal wordpress">
+          <div class="h-44 bg-gradient-to-tr from-cyan-700 via-teal-700 to-emerald-600 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-solid fa-briefcase"></i> Job Portal (Australia)
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">Ethical Hire</h3>
+              <p class="text-xs text-white/90">CodeIgniter 4 Job & Subscription Portal</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Architected a full job recruitment platform with role-based access for Job Seekers, Employers, and Admins. Built custom search filters, Stripe subscription billing, and Google Maps API radius search.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CodeIgniter 4</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MySQL</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Stripe Subscriptions</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Google Maps API</span>
+              </div>
+            </div>
+            <a href="https://ethicalhire.com.au" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>Visit Live Portal</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 7. Patelco Credit Union -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="portal react wordpress">
+          <div class="h-44 bg-gradient-to-tr from-blue-900 via-indigo-800 to-sky-700 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-solid fa-calculator"></i> FinTech & Angular
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">Patelco Credit Union</h3>
+              <p class="text-xs text-white/90">Home Equity Calculator & Portal (USA)</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Developed interactive Angular loan calculations with monthly dynamic sliders for credit & equity amounts. Implemented custom ACF fields, Bookly appointments, and responsive UI.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Angular</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Financial Logic</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">WordPress & ACF</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Bookly Plugin</span>
+              </div>
+            </div>
+            <a href="https://patelco.org" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-blue-700 hover:text-white dark:hover:bg-blue-700 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>Visit Official Site</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 8. Wellness & Health 4 All -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="react">
+          <div class="h-44 bg-gradient-to-tr from-teal-600 via-emerald-600 to-lime-600 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-brands fa-react"></i> React JS Platform
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">Wellness & Health 4 All</h3>
+              <p class="text-xs text-white/90">Transformative Yoga & Retreat Discovery</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Built the frontend application in React JS for an international wellness retreat discovery platform. Designed clean, mindful UI cards and intuitive navigation for event booking.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">React JS</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SPA Architecture</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CSS Modules</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Responsive UI</span>
+              </div>
+            </div>
+            <a href="https://wellnessandhealth4all.com/" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-600 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>Visit Live Platform</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 9. TRLIT Mail App -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="react portal">
+          <div class="h-44 bg-gradient-to-tr from-slate-800 via-sky-800 to-brand-700 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-solid fa-envelope"></i> Next JS SSR App
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">TRLIT Mail App</h3>
+              <p class="text-xs text-white/90">Web Mail Client with Next.js</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Web-based email application engineered in Next JS with server-side rendering for speed and security. Features full inbox management, email compose, and authentication state.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Next JS</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SSR</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JWT Auth</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">State Management</span>
+              </div>
+            </div>
+            <a href="https://mail.trlitsolutions.com" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>Visit Webmail Client</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 10. SparknFly (Canada) -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="shopify wordpress">
+          <div class="h-44 bg-gradient-to-tr from-emerald-800 via-green-700 to-teal-600 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-solid fa-cannabis"></i> Custom PHP + WP (Canada)
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">SparknFly</h3>
+              <p class="text-xs text-white/90">E-Commerce & Custom Admin (Canada)</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Designed a custom PHP admin panel for catalog and stock control, coupled with age-gated e-commerce storefront for Canadian clientele with price and category filtering.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Custom Admin Panel</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Core PHP</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">WordPress</span>
+              </div>
+            </div>
+            <a href="https://sparknfly.ca" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-green-700 hover:text-white dark:hover:bg-green-700 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>Visit Live Website</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 11. WebRX Pharma (UK) -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="wordpress shopify">
+          <div class="h-44 bg-gradient-to-tr from-cyan-800 via-sky-700 to-blue-600 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-solid fa-prescription-bottle-medical"></i> Healthcare (UK)
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">WebRX Pharma</h3>
+              <p class="text-xs text-white/90">Healthcare & Doctor Consultation (UK)</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                UK pharmaceutical platform providing prescription medications and aesthetic solutions to medical practitioners and patients with HIPAA/GDPR-compliant user management.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">WordPress</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Pharma Compliance</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">UK Market</span>
+              </div>
+            </div>
+            <a href="https://webrx.co.uk" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-sky-600 hover:text-white dark:hover:bg-sky-600 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>Visit Live Website</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 12. La Fleur De Luxe -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="shopify wordpress">
+          <div class="h-44 bg-gradient-to-tr from-stone-800 via-rose-950 to-slate-900 p-6 flex flex-col justify-between text-white relative">
+            <span class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md">
+              <i class="fa-solid fa-gem"></i> Luxury Floral Brand
+            </span>
+            <div>
+              <h3 class="text-xl font-extrabold tracking-tight">La Fleur De Luxe</h3>
+              <p class="text-xs text-white/90">Luxury Preserved Floral Arrangements</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Luxury brand eCommerce store specialized in preserved roses and customizable luxury arrangements for weddings, high-end celebrations, and international corporate gifts.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">eCommerce</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Custom Box Builder</span>
+                <span class="px-2 py-0.5 text-xs font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Luxury UI</span>
+              </div>
+            </div>
+            <a href="https://lafleurdeluxe.com" target="_blank" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-bold text-xs text-slate-700 dark:text-slate-200 hover:bg-slate-800 hover:text-white dark:hover:bg-slate-700 hover:border-transparent transition-all flex items-center justify-center gap-2">
+              <span>Visit Live Website</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FREELANCE PRICING PLANS ================= -->
+  <section id="pricing" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Heading & Currency Toggle -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Freelance Services & Rate Card</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Transparent, Value-Driven Pricing</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-400">Tailored packages for startups, growing businesses, and enterprise clients. Fixed packages or flexible hourly arrangements.</p>
+
+        <!-- Currency Switcher -->
+        <div class="mt-6 inline-flex items-center p-1 rounded-xl bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700">
+          <button id="currUSD" class="curr-btn px-4 py-1.5 rounded-lg text-xs font-bold bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm transition-all">USD ($)</button>
+          <button id="currINR" class="curr-btn px-4 py-1.5 rounded-lg text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">INR (₹)</button>
+        </div>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- 1. WordPress & WooCommerce -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-cyan-500 shadow-sm hover:shadow-xl transition-all">
+          <div>
+            <div class="text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-wider">CMS & Web</div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">WordPress / WooCommerce</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-6">Business sites, custom themes, online stores</p>
+            
+            <div class="mb-6">
+              <span class="text-3xl font-extrabold text-slate-900 dark:text-white price-val" data-usd="$450" data-inr="₹35,000">$450</span>
+              <span class="text-xs font-medium text-slate-500 dark:text-slate-400">/ starting</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300 mb-6">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Custom ACF / Meta Box development</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>WooCommerce store & Stripe/PayPal gateway</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Core Web Vitals & speed optimization</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>100% mobile-responsive design</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Core PHP to WordPress migration</span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20your%20WordPress/WooCommerce%20package" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-xs text-center hover:opacity-90 transition-opacity">
+            Choose WordPress
+          </a>
+        </div>
+
+        <!-- 2. Shopify & Shopify Apps (Popular) -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-2 border-brand-500 relative shadow-lg hover:shadow-2xl transition-all scale-[1.02]">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wide bg-gradient-to-r from-brand-600 to-accent-emerald text-white shadow-sm">
+            Most Popular
+          </div>
+          <div>
+            <div class="text-xs font-bold text-brand-600 dark:text-brand-400 uppercase tracking-wider">Shopify Ecosystem</div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Shopify Stores & Apps</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-6">Custom Liquid, AI integrations & App Store apps</p>
+            
+            <div class="mb-6">
+              <span class="text-3xl font-extrabold text-slate-900 dark:text-white price-val" data-usd="$850" data-inr="₹65,000">$850</span>
+              <span class="text-xs font-medium text-slate-500 dark:text-slate-400">/ starting</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300 mb-6">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Custom Shopify App (Public/Private)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>AI features & LLM integration (like ShopPilot)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Polaris UI + App Bridge + Webhooks</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Custom Liquid theme sections & conversion design</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Billing API & automated subscription logic</span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20Shopify%20App/Store%20development" target="_blank" class="w-full py-2.5 rounded-xl bg-brand-600 text-white font-bold text-xs text-center hover:bg-brand-700 shadow-md transition-all">
+            Choose Shopify
+          </a>
+        </div>
+
+        <!-- 3. React & Next.js -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-indigo-500 shadow-sm hover:shadow-xl transition-all">
+          <div>
+            <div class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Modern Frontend</div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">React & Next.js (SSR)</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-6">Fast SPAs, server-rendered SaaS apps, dashboards</p>
+            
+            <div class="mb-6">
+              <span class="text-3xl font-extrabold text-slate-900 dark:text-white price-val" data-usd="$950" data-inr="₹75,000">$950</span>
+              <span class="text-xs font-medium text-slate-500 dark:text-slate-400">/ starting</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300 mb-6">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Next.js App Router & SSR for top SEO</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Modular React components & Tailwind CSS</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>API integration (REST / GraphQL / Auth)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Interactive filters, dashboards & charts</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Fast deployment to Vercel or cloud VPS</span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20a%20React/Next.js%20project" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-xs text-center hover:opacity-90 transition-opacity">
+            Choose React / Next.js
+          </a>
+        </div>
+
+        <!-- 4. Custom PHP & Enterprise Portals -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-purple-500 shadow-sm hover:shadow-xl transition-all">
+          <div>
+            <div class="text-xs font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider">Enterprise & Backend</div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Full-Stack Portals</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-6">CodeIgniter 4, Angular calculators, job portals</p>
+            
+            <div class="mb-6">
+              <span class="text-3xl font-extrabold text-slate-900 dark:text-white price-val" data-usd="$1,500" data-inr="₹1,15,000">$1,500</span>
+              <span class="text-xs font-medium text-slate-500 dark:text-slate-400">/ starting</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300 mb-6">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Custom MVC architecture & MySQL schema</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Role-based user permissions (RBAC)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Stripe recurring subscription tiers</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Google Maps API & radius-based search</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                <span>Complete admin panel & reporting tools</span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20a%20Full-Stack%20Custom%20Portal" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-xs text-center hover:opacity-90 transition-opacity">
+            Choose Custom Portal
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Hourly & Retainer Banner -->
+      <div class="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-brand-900 via-indigo-900 to-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white inline-block mb-2">Hourly & Retainer Options</span>
+          <h4 class="text-xl sm:text-2xl font-bold">Need Ongoing Dedicated Development or Hourly Work?</h4>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl">I offer flexible hourly billing at <strong>$30 – $45 / hour</strong> (or <strong>₹1,500 – ₹2,500 / hr</strong>), as well as monthly maintenance retainers covering bug fixes, feature expansion, and speed monitoring.</p>
+        </div>
+        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I%20would%20like%20to%20discuss%20an%20hourly%20contract%20or%20retainer" target="_blank" class="whitespace-nowrap px-6 py-3 rounded-xl bg-white text-brand-900 font-bold text-sm hover:bg-slate-100 shadow-md transition-all">
+          Discuss Retainer Plan
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WORK EXPERIENCE ================= -->
+  <section id="experience" class="py-20 bg-slate-100/70 dark:bg-slate-900/40">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">Career History</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Professional Experience</h2>
+      </div>
+
+      <div class="relative border-l-2 border-brand-500/40 ml-4 sm:ml-8 space-y-12">
+
+        <!-- Role 1 -->
+        <div class="relative pl-8">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-600 border-4 border-white dark:border-slate-900 shadow"></div>
+          <div class="glass-card p-6 rounded-2xl shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Software Engineer</h3>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-brand-100 dark:bg-brand-950 text-brand-700 dark:text-brand-300 self-start sm:self-auto">July 2022 – Present</span>
+            </div>
+            <div class="text-sm font-semibold text-brand-600 dark:text-brand-400 mb-4">Webile Technologies Pvt. Ltd</div>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside leading-relaxed">
+              <li>Lead full-stack development on enterprise PHP, WordPress, React, and Angular web platforms.</li>
+              <li>Engineered custom plugins, integrated third-party payment gateways (Stripe), and implemented complex role-based access.</li>
+              <li>Collaborated cross-functionally with UI/UX designers, project managers, and international clients to ship production code.</li>
+              <li>Championed performance tuning, resulting in significant Core Web Vitals speed gains across client platforms.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="relative pl-8">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-400 border-4 border-white dark:border-slate-900 shadow"></div>
+          <div class="glass-card p-6 rounded-2xl shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">PHP Developer</h3>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 self-start sm:self-auto">May 2021 – December 2021</span>
+            </div>
+            <div class="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">LIOM IT Hub Pvt. Ltd</div>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside leading-relaxed">
+              <li>Developed backend web services, relational database structures, and dynamic frontend components with PHP and MySQL.</li>
+              <li>Integrated APIs, solved cross-browser styling discrepancies, and maintained legacy codebases.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="relative pl-8">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white dark:border-slate-900 shadow"></div>
+          <div class="glass-card p-6 rounded-2xl shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Bachelor of Engineering (Computer Engineering)</h3>
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 self-start sm:self-auto">Graduated 2020</span>
+            </div>
+            <div class="text-sm font-semibold text-slate-500 dark:text-slate-400">Apollo Institute of Engineering and Technology | Gujarat Technological University</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & CALL TO ACTION ================= -->
+  <section class="py-20 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="glass-card p-8 sm:p-14 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-800">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-800 dark:bg-brand-950 dark:text-brand-300 mb-4">
+          <i class="fa-solid fa-paper-plane"></i> Let's Work Together
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Have a Project in Mind?</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
+          Whether you need an MVP built from scratch, a customized Shopify or WooCommerce store, or an experienced full-stack engineer to reinforce your team, let's talk.
+        </p>
+
+        <div class="mt-8 flex flex-wrap justify-center items-center gap-4">
+          <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20let's%20discuss%20a%20project" target="_blank" class="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Chat on WhatsApp (+91-8780432116)</span>
+          </a>
+          <a href="mailto:bhumikapatel8511@gmail.com" class="px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-sm"></i>
+            <span>Send Email</span>
+          </a>
+        </div>
+
+        <div class="mt-8 text-xs text-slate-500 dark:text-slate-400">
+          Typical response time: Within 2 to 4 hours
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500 dark:text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © <span id="currentYear"></span> Bhumika Patel. All rights reserved.
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="mailto:bhumikapatel8511@gmail.com" class="hover:text-brand-600">Email</a>
+        <a href="tel:+918780432116" class="hover:text-brand-600">Phone</a>
+        <a href="https://wa.me/918780432116" target="_blank" class="hover:text-brand-600">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // Set Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Theme Toggle (Dark/Light)
+    const themeToggleBtn = document.getElementById('themeToggle');
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    });
+
+    // Project Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle Active Class on Button
+        filterButtons.forEach(b => {
+          b.classList.remove('active', 'bg-brand-600', 'text-white');
+          b.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+        });
+        btn.classList.add('active', 'bg-brand-600', 'text-white');
+        btn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const categories = card.getAttribute('data-category') || '';
+          if (filterValue === 'all' || categories.includes(filterValue)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Currency Switcher (USD / INR)
+    const btnUSD = document.getElementById('currUSD');
+    const btnINR = document.getElementById('currINR');
+    const priceElements = document.querySelectorAll('.price-val');
+
+    btnUSD.addEventListener('click', () => {
+      btnUSD.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-900', 'dark:text-white', 'shadow-sm');
+      btnUSD.classList.remove('text-slate-600', 'dark:text-slate-400');
+      btnINR.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-900', 'dark:text-white', 'shadow-sm');
+      btnINR.classList.add('text-slate-600', 'dark:text-slate-400');
+
+      priceElements.forEach(el => {
+        el.textContent = el.getAttribute('data-usd');
+      });
+    });
+
+    btnINR.addEventListener('click', () => {
+      btnINR.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-900', 'dark:text-white', 'shadow-sm');
+      btnINR.classList.remove('text-slate-600', 'dark:text-slate-400');
+      btnUSD.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-900', 'dark:text-white', 'shadow-sm');
+      btnUSD.classList.add('text-slate-600', 'dark:text-slate-400');
+
+      priceElements.forEach(el => {
+        el.textContent = el.getAttribute('data-inr');
+      });
+    });
+  </script>
+</body>
+</html>
