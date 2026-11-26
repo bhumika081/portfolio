@@ -3,20 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhumika Patel — Senior Software Engineer & Full-Stack Specialist</title>
-  <meta name="description" content="Portfolio of Bhumika Patel — Senior Software Engineer specializing in React, Next.js, Angular, Shopify Apps, WordPress, and PHP." />
+  
+  <!-- Primary Meta Tags -->
+  <title>Bhumika Patel — Senior Software Engineer | Full-Stack & Shopify Apps</title>
+  <meta name="title" content="Bhumika Patel — Senior Software Engineer | Full-Stack & Shopify Apps" />
+  <meta name="description" content="Portfolio of Bhumika Patel — Senior Software Engineer with 4+ years of experience engineering scalable web applications, AI-powered Shopify apps, and enterprise platforms using React, Next.js, Angular, PHP, and modern technologies." />
+  <meta name="keywords" content="Bhumika Patel, Senior Software Engineer, Full Stack Developer, React, Next.js, Angular, Shopify App Developer, CodeIgniter, WordPress, PHP Developer" />
+  <meta name="author" content="Bhumika Patel" />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bhumika081.github.io/portfolio/" />
+  <meta property="og:title" content="Bhumika Patel — Senior Software Engineer | Full-Stack & Shopify Apps" />
+  <meta property="og:description" content="Engineering digital products that scale. 4+ years building high-performance web applications, AI Shopify apps, and enterprise platforms." />
 
-  <!-- Google Fonts: Space Grotesk (700/600), Inter (400/500/600), Space Mono -->
+  <!-- Google Fonts: Space Grotesk (Headings) & Inter (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
+  <!-- Tailwind CSS CDN with Requested Design System -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -24,44 +34,20 @@
           fontFamily: {
             grotesk: ['"Space Grotesk"', 'sans-serif'],
             inter: ['"Inter"', 'sans-serif'],
-            mono: ['"Space Mono"', 'monospace'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            burgundy: {
-              DEFAULT: '#7B182C', // Signature Burgundy
-              hover: '#631121',
-              light: '#96233B',
-              subtle: '#F4E7E9',
-              dark: '#4F0C1A',
-            },
-            mceblack: {
-              DEFAULT: '#111111', // MCE Black
-              deep: '#0A0A0A',
-              card: '#181514',
-            },
-            espresso: {
-              DEFAULT: '#362B28', // Espresso
-              deep: '#231B18',
-              light: '#4C3D39',
-              muted: '#61514D',
-            },
-            olive: {
-              DEFAULT: '#556B2F', // Olive
-              muted: '#62773B',
-              light: '#EDF2E6',
-              border: '#B3C49B',
-            },
-            champagne: {
-              DEFAULT: '#F7E7CE', // Champagne
-              light: '#FAF5ED',
-              card: '#EFE7DA',
-              warm: '#E8DDCB',
-            },
-            taupe: {
-              DEFAULT: '#B7A99A', // Taupe
-              muted: '#A19181',
-              light: '#DFD7CD',
-              border: '#CEC4B7',
+            theme: {
+              bg: '#0B0D10',          // Charcoal Background
+              card: '#13171D',        // Card Background
+              cardhover: '#181E26',
+              accent: '#A3E635',      // Primary Lime Accent
+              accenthover: '#84CC16',
+              border: '#262B33',      // Subtle Border
+              borderlight: '#323944',
+              text: '#B5BBC5',        // Body Text
+              heading: '#FFFFFF',     // Heading Text
+              muted: '#717886',
             }
           }
         }
@@ -69,93 +55,51 @@
     }
   </script>
 
+  <!-- JSON-LD Structured Data for Recruiter SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bhumika Patel",
+    "jobTitle": "Senior Software Engineer",
+    "email": "bhumikapatel8511@gmail.com",
+    "telephone": "+918780432116",
+    "url": "https://bhumika081.github.io/portfolio/",
+    "sameAs": [
+      "https://github.com/bhumika081",
+      "https://www.linkedin.com/in/bhumika-patel"
+    ],
+    "knowsAbout": ["React.js", "Next.js", "Angular", "Shopify Apps", "PHP", "CodeIgniter", "WordPress", "MySQL", "Full-Stack Development"]
+  }
+  </script>
+
   <style>
-    /* Global & Typography hierarchy specified by user */
     body {
-      background-color: #FAF5ED; /* Champagne light background */
-      color: #231B18; /* Espresso deep text */
+      background-color: #0B0D10;
+      color: #B5BBC5;
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
     }
 
-    /* Strict Font Mapping Rules */
-    .hero-heading {
+    /* Headings strictly Space Grotesk */
+    h1, h2, h3, h4, .font-heading {
       font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      letter-spacing: -0.03em;
     }
 
-    .section-heading {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600;
-      letter-spacing: -0.02em;
+    /* Glow highlights */
+    .glow-lime {
+      box-shadow: 0 0 30px rgba(163, 230, 53, 0.15);
+    }
+    .glow-lime-card:hover {
+      box-shadow: 0 10px 40px -10px rgba(163, 230, 53, 0.12);
     }
 
-    p, .body-text {
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-    }
-
-    .nav-text {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-    }
-
-    .btn-text {
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-    }
-
-    .small-label {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    /* Watermark background typography */
-    .watermark-text {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: clamp(4rem, 16vw, 13rem);
-      line-height: 0.85;
-      letter-spacing: -0.05em;
-      color: rgba(54, 43, 40, 0.04);
-      user-select: none;
-      pointer-events: none;
-    }
-
-    /* Tag boxes */
-    .editorial-tag {
-      border: 1px solid #CEC4B7;
-      background: #FAF5ED;
-      box-shadow: 2px 2px 0px #362B28;
-    }
-
-    .editorial-tag-dark {
-      border: 1px solid rgba(247, 231, 206, 0.25);
-      background: #181514;
-      box-shadow: 2px 2px 0px rgba(123, 24, 44, 0.4);
-    }
-
-    /* Infinite Marquee */
-    @keyframes marquee {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-50%); }
-    }
-    .animate-marquee {
-      display: flex;
-      width: 200%;
-      animation: marquee 24s linear infinite;
-    }
-    .animate-marquee:hover {
-      animation-play-state: paused;
-    }
-
-    /* Subtle texture */
-    .noise-bg {
-      background-image: radial-gradient(rgba(54, 43, 40, 0.06) 1px, transparent 0);
-      background-size: 24px 24px;
+    /* Subtle grid background */
+    .grid-pattern {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     }
 
     /* Custom Scrollbar */
@@ -163,54 +107,59 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #FAF5ED;
+      background: #0B0D10;
     }
     ::-webkit-scrollbar-thumb {
-      background: #B7A99A;
+      background: #262B33;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #7B182C;
+      background: #A3E635;
     }
   </style>
 </head>
 
-<body class="selection:bg-burgundy selection:text-champagne antialiased">
+<body class="selection:bg-theme-accent selection:text-black antialiased">
 
-  <!-- ================= TOP NAVIGATION ================= -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#FAF5ED]/95 border-b border-taupe-border transition-colors">
+  <!-- ================= STICKY TOP NAVIGATION ================= -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#0B0D10]/90 border-b border-theme-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Logo / Monogram -->
       <a href="#" class="flex items-center gap-3 group">
-        <span class="small-label text-xs px-2.5 py-1 bg-burgundy text-champagne font-bold rounded shadow-sm">
-          // BP
-        </span>
-        <div class="leading-none">
-          <span class="hero-heading text-lg tracking-tight text-mceblack block group-hover:text-burgundy transition-colors">
-            BHUMIKA PATEL<span class="text-burgundy">.</span>
+        <div class="w-10 h-10 rounded-xl bg-theme-card border border-theme-border group-hover:border-theme-accent flex items-center justify-center font-mono text-sm font-bold text-theme-accent transition-colors shadow-sm">
+          BP
+        </div>
+        <div>
+          <span class="block font-heading font-bold text-base text-white tracking-tight group-hover:text-theme-accent transition-colors">
+            Bhumika Patel
           </span>
-          <span class="small-label text-[10px] text-espresso-muted">
+          <span class="block text-xs font-mono text-theme-muted tracking-wide">
             Senior Software Engineer
           </span>
         </div>
       </a>
 
-      <!-- Navigation Links (Inter 500) -->
-      <nav class="hidden md:flex items-center gap-8 nav-text text-xs uppercase tracking-wider text-espresso">
-        <a href="#about" class="hover:text-burgundy transition-colors">/01. About</a>
-        <a href="#services" class="hover:text-burgundy transition-colors">/02. Services</a>
-        <a href="#works" class="hover:text-burgundy transition-colors">/03. Works</a>
-        <a href="#pricing" class="hover:text-burgundy transition-colors">/04. Pricing</a>
-        <a href="#experience" class="hover:text-burgundy transition-colors">/05. Experience</a>
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-medium uppercase tracking-wider text-theme-text">
+        <a href="#about" class="hover:text-theme-accent transition-colors">About</a>
+        <a href="#case-studies" class="hover:text-theme-accent transition-colors">Case Studies</a>
+        <a href="#all-projects" class="hover:text-theme-accent transition-colors">All Projects</a>
+        <a href="#tech-stack" class="hover:text-theme-accent transition-colors">Skills</a>
+        <a href="#experience" class="hover:text-theme-accent transition-colors">Experience</a>
+        <a href="#pricing" class="hover:text-theme-accent transition-colors">Pricing</a>
       </nav>
 
-      <!-- Action Buttons (Inter 600) -->
+      <!-- Action Buttons (Recruiter & Client Track) -->
       <div class="flex items-center gap-3">
-        <a href="https://github.com/bhumika081" target="_blank" class="w-10 h-10 rounded-full border border-taupe-border flex items-center justify-center text-espresso hover:bg-espresso hover:text-champagne transition-all" title="GitHub @bhumika081">
-          <i class="fa-brands fa-github text-sm"></i>
+        <!-- Resume Button -->
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-theme-border text-white text-xs font-semibold hover:border-theme-accent hover:text-theme-accent transition-colors">
+          <i class="fa-regular fa-file-pdf text-sm"></i>
+          <span>Resume</span>
         </a>
-        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project" target="_blank" class="px-5 py-2.5 rounded-full bg-burgundy hover:bg-burgundy-hover text-champagne btn-text text-xs tracking-wider shadow-sm hover:shadow-md transition-all flex items-center gap-2">
+
+        <!-- Let's Talk CTA -->
+        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect" target="_blank" class="px-5 py-2.5 rounded-lg bg-theme-accent hover:bg-theme-accenthover text-black text-xs font-semibold tracking-wide transition-all flex items-center gap-2 shadow-sm">
           <span>Let's Talk</span>
           <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
         </a>
@@ -220,1143 +169,1295 @@
   </header>
 
   <!-- ================= HERO SECTION ================= -->
-  <section id="about" class="relative pt-12 pb-20 md:pt-16 md:pb-28 overflow-hidden noise-bg border-b border-taupe-border">
+  <section id="hero" class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden grid-pattern border-b border-theme-border">
     
-    <!-- Watermark Giant Typography in Background -->
-    <div class="watermark-text absolute top-10 left-1/2 -translate-x-1/2 whitespace-nowrap">
-      DEVELOPER
-    </div>
+    <!-- Ambient Green Glow in Background -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-theme-accent/5 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
-      
-      <!-- Top Tag & Availability Badge (Inter 500 uppercase) -->
-      <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 editorial-tag small-label text-xs text-espresso rounded">
-          <span class="w-2 h-2 rounded-full bg-olive animate-pulse"></span>
-          AVAILABLE FOR FREELANCE & FULL-TIME ROLES
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7">
+          
+          <!-- Availability Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-theme-card border border-theme-border text-xs font-mono uppercase tracking-wider text-theme-accent mb-6 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-theme-accent animate-pulse"></span>
+            AVAILABLE FOR FULL-TIME & HIGH-IMPACT FREELANCE
+          </div>
+
+          <!-- Hero Headline (Space Grotesk 700) -->
+          <h1 class="font-heading font-bold text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.08]">
+            Engineering Digital Products <span class="text-theme-accent">That Scale.</span>
+          </h1>
+
+          <!-- Body Text (Inter 400) -->
+          <p class="mt-6 text-base sm:text-lg text-theme-text leading-relaxed max-w-2xl font-normal">
+            Hi, I'm <strong>Bhumika Patel</strong> — a <strong>Senior Software Engineer</strong> crafting high-performance digital experiences. I architect scalable web applications, published Shopify App Store solutions, and robust enterprise platforms using <strong>React, Next.js, Angular, PHP (CodeIgniter 4), and modern cloud stacks</strong>.
+          </p>
+
+          <!-- Dual-Track Action Buttons -->
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a href="#case-studies" class="px-6 py-3.5 rounded-xl bg-theme-accent hover:bg-theme-accenthover text-black font-semibold text-xs tracking-wider transition-all flex items-center gap-2.5 shadow-md">
+              <span>View Case Studies</span>
+              <i class="fa-solid fa-arrow-down text-xs"></i>
+            </a>
+            
+            <a href="https://github.com/bhumika081" target="_blank" class="px-6 py-3.5 rounded-xl bg-theme-card hover:bg-theme-cardhover border border-theme-border hover:border-theme-borderlight text-white font-semibold text-xs tracking-wider transition-all flex items-center gap-2">
+              <i class="fa-brands fa-github text-sm"></i>
+              <span>GitHub Profile</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/bhumika-patel" target="_blank" class="px-6 py-3.5 rounded-xl bg-theme-card hover:bg-theme-cardhover border border-theme-border hover:border-theme-borderlight text-white font-semibold text-xs tracking-wider transition-all flex items-center gap-2">
+              <i class="fa-brands fa-linkedin-in text-sm text-[#0077b5]"></i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="mt-12 pt-8 border-t border-theme-border/70 grid grid-cols-2 sm:grid-cols-4 gap-6">
+            <div>
+              <div class="font-heading font-bold text-3xl text-white">4+ Years</div>
+              <div class="text-xs text-theme-muted mt-1 font-mono uppercase tracking-wide">Industry Experience</div>
+            </div>
+            <div>
+              <div class="font-heading font-bold text-3xl text-theme-accent">17+</div>
+              <div class="text-xs text-theme-muted mt-1 font-mono uppercase tracking-wide">Shipped Web Products</div>
+            </div>
+            <div>
+              <div class="font-heading font-bold text-3xl text-white">5+</div>
+              <div class="text-xs text-theme-muted mt-1 font-mono uppercase tracking-wide">Markets (US, UK, AU, IE)</div>
+            </div>
+            <div>
+              <div class="font-heading font-bold text-3xl text-theme-accent">100%</div>
+              <div class="text-xs text-theme-muted mt-1 font-mono uppercase tracking-wide">On-Time Delivery</div>
+            </div>
+          </div>
+
         </div>
-        <div class="small-label text-xs text-espresso-muted">
-          [ 4+ YEARS EXPERIENCE ✱ BASED IN INDIA ✱ GLOBAL CLIENTS ]
+
+        <!-- Right Hero: Code / Engineering Interactive Card -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-theme-card border border-theme-border p-6 shadow-2xl relative overflow-hidden glow-lime">
+            
+            <!-- Window Title Bar -->
+            <div class="flex items-center justify-between pb-4 border-b border-theme-border font-mono text-xs text-theme-muted">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-theme-accent/80 inline-block"></span>
+                <span class="ml-2 text-theme-text">BhumikaPatel.ts</span>
+              </div>
+              <span class="text-theme-accent font-semibold text-[11px]">// SENIOR ENGINEER</span>
+            </div>
+
+            <!-- Code Snippet -->
+            <pre class="font-mono text-xs sm:text-sm text-theme-text py-5 leading-relaxed overflow-x-auto"><code><span class="text-purple-400">interface</span> <span class="text-blue-400">Engineer</span> {
+  name: <span class="text-theme-accent">"Bhumika Patel"</span>;
+  role: <span class="text-theme-accent">"Senior Software Engineer"</span>;
+  experienceYears: <span class="text-amber-400">4</span>;
+  specialization: [
+    <span class="text-theme-accent">"Scalable Web Architecture"</span>,
+    <span class="text-theme-accent">"Shopify App Development"</span>,
+    <span class="text-theme-accent">"Enterprise Web Portals"</span>
+  ];
+  coreStack: {
+    frontend: [<span class="text-theme-accent">"React"</span>, <span class="text-theme-accent">"Next.js"</span>, <span class="text-theme-accent">"Angular"</span>];
+    backend: [<span class="text-theme-accent">"PHP"</span>, <span class="text-theme-accent">"CodeIgniter 4"</span>, <span class="text-theme-accent">"Node"</span>];
+    cms: [<span class="text-theme-accent">"Shopify"</span>, <span class="text-theme-accent">"WordPress"</span>, <span class="text-theme-accent">"WooCommerce"</span>];
+  };
+  metrics: <span class="text-theme-accent">"90+ Core Web Vitals Guaranteed"</span>;
+}</code></pre>
+
+            <!-- Bottom Quick Contact Strip -->
+            <div class="pt-4 border-t border-theme-border/80 flex items-center justify-between text-xs font-mono">
+              <span class="text-theme-muted">Based in India • Global Remote</span>
+              <a href="mailto:bhumikapatel8511@gmail.com" class="text-theme-accent hover:underline flex items-center gap-1">
+                <span>Email Direct</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ME & ENGINEERING PHILOSOPHY ================= -->
+  <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-8 border-b border-theme-border">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left Column -->
+      <div class="lg:col-span-5">
+        <span class="text-xs font-mono uppercase tracking-wider text-theme-accent font-semibold">// 01. PROFILE & MINDSET</span>
+        <h2 class="font-heading font-semibold text-3xl sm:text-4xl text-white mt-2">
+          Engineering with Purpose, Precision, and Measurable Impact.
+        </h2>
+        <div class="mt-6 p-6 rounded-2xl bg-theme-card border border-theme-border">
+          <div class="text-xs font-mono uppercase tracking-wider text-theme-accent mb-2">CORE SPECIALIZATION</div>
+          <p class="text-sm text-theme-text leading-relaxed">
+            Managing the complete software development lifecycle — from architectural planning and relational database schema design to rapid frontend implementation, third-party API orchestration, and Core Web Vitals optimization.
+          </p>
         </div>
       </div>
 
-      <!-- Main Hero Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left Column: Big Headline & Bio -->
-        <div class="lg:col-span-7">
-          <!-- Hero Heading: Space Grotesk 700 -->
-          <h1 class="hero-heading text-4xl sm:text-6xl lg:text-7xl text-mceblack leading-[1.05]">
-            BUILDING SCALABLE <span class="text-burgundy">WEB APPS</span> & SHOPIFY SOLUTIONS.
-          </h1>
+      <!-- Right Column: Narrative Story -->
+      <div class="lg:col-span-7 space-y-6 text-theme-text leading-relaxed text-sm sm:text-base">
+        <p>
+          Over the past <strong>4+ years</strong>, I have contributed across both product-led startups and high-velocity IT service firms. My work spans from building custom FinTech calculators for US credit unions to publishing merchant AI tools on the official <strong>Shopify App Store</strong>.
+        </p>
 
-          <!-- Paragraph: Inter 400 -->
-          <p class="mt-8 body-text text-base sm:text-lg text-espresso-light leading-relaxed max-w-2xl">
-            I am a <strong>Senior Software Engineer</strong> specializing in full-stack development. I architect and engineer high-performance web applications using <strong>React, Next.js, Angular, Shopify Apps, WordPress, and PHP</strong>. From AI-driven merchant applications on the official Shopify App Store to international eCommerce portals, I build digital experiences that drive real business revenue.
-          </p>
+        <p>
+          I don't just write templates or feature lists. I approach every project by understanding:
+          <span class="text-white font-medium"> What is the core business bottleneck? How will this architecture scale? And how can we ensure frictionless user adoption?</span>
+        </p>
 
-          <!-- Key Metrics Badges -->
-          <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-xl">
-            <div class="p-4 bg-white/80 border border-taupe-border rounded-xl shadow-sm">
-              <div class="hero-heading text-3xl text-mceblack">4+</div>
-              <div class="small-label text-[11px] text-espresso-muted mt-1">Years Experience</div>
-            </div>
-            <div class="p-4 bg-white/80 border border-taupe-border rounded-xl shadow-sm">
-              <div class="hero-heading text-3xl text-burgundy">15+</div>
-              <div class="small-label text-[11px] text-espresso-muted mt-1">Shipped Projects</div>
-            </div>
-            <div class="p-4 bg-white/80 border border-taupe-border rounded-xl shadow-sm col-span-2 sm:col-span-1">
-              <div class="hero-heading text-3xl text-olive">5+</div>
-              <div class="small-label text-[11px] text-espresso-muted mt-1">Global Markets</div>
-            </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+          <div class="p-4 rounded-xl bg-theme-card/60 border border-theme-border">
+            <div class="text-theme-accent font-mono text-sm font-semibold mb-1">01. Clean Code</div>
+            <p class="text-xs text-theme-muted">Maintainable, modular MVC architecture following industry best practices.</p>
           </div>
-
-          <!-- CTAs (Buttons: Inter 600) -->
-          <div class="mt-10 flex flex-wrap items-center gap-4">
-            <a href="#works" class="px-7 py-4 rounded-full bg-mceblack hover:bg-burgundy text-champagne btn-text text-xs tracking-wider transition-all flex items-center gap-3 shadow-lg">
-              <span>Checkout My Works</span>
-              <i class="fa-solid fa-arrow-down text-xs"></i>
-            </a>
-            <a href="#pricing" class="px-7 py-4 rounded-full border border-espresso text-espresso hover:bg-espresso hover:text-champagne btn-text text-xs tracking-wider transition-all flex items-center gap-2">
-              <i class="fa-solid fa-tags text-xs"></i>
-              <span>Pricing Plans</span>
-            </a>
+          <div class="p-4 rounded-xl bg-theme-card/60 border border-theme-border">
+            <div class="text-theme-accent font-mono text-sm font-semibold mb-1">02. High Performance</div>
+            <p class="text-xs text-theme-muted">Obsessed with sub-second page loads, minimal DOM weight, and 90+ Core Web Vitals.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-theme-card/60 border border-theme-border">
+            <div class="text-theme-accent font-mono text-sm font-semibold mb-1">03. Business Value</div>
+            <p class="text-xs text-theme-muted">Directly helping clients increase conversions, merchant automation, and recurring revenue.</p>
           </div>
         </div>
-
-        <!-- Right Column: Editorial Profile Card (MCE Black & Burgundy) -->
-        <div class="lg:col-span-5">
-          <div class="relative mx-auto max-w-md bg-mceblack-card text-champagne rounded-3xl p-8 shadow-2xl border border-espresso-light overflow-hidden group">
-            
-            <!-- Glow background accent -->
-            <div class="absolute -top-16 -right-16 w-48 h-48 bg-burgundy/30 rounded-full blur-3xl pointer-events-none"></div>
-
-            <!-- Header of card -->
-            <div class="flex items-center justify-between pb-6 border-b border-white/10 small-label text-xs text-taupe">
-              <span>// ENGINEER PROFILE</span>
-              <span class="text-olive flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-olive animate-ping"></span> ACTIVE</span>
-            </div>
-
-            <!-- Profile Info & Avatar Graphic -->
-            <div class="my-8 flex flex-col items-center text-center">
-              <div class="w-28 h-28 rounded-2xl bg-espresso border-2 border-burgundy flex items-center justify-center text-4xl hero-heading text-champagne shadow-xl mb-5 group-hover:scale-105 transition-transform">
-                BP
-              </div>
-              <h3 class="hero-heading text-2xl text-champagne">Bhumika Patel</h3>
-              <p class="small-label text-xs text-burgundy-light mt-1">Full-Stack & Shopify App Engineer</p>
-            </div>
-
-            <!-- Contact Highlights -->
-            <div class="space-y-3 nav-text text-xs">
-              <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
-                <span class="text-taupe small-label">EMAIL</span>
-                <a href="mailto:bhumikapatel8511@gmail.com" class="text-champagne hover:text-burgundy-light transition-colors">bhumikapatel8511@gmail.com</a>
-              </div>
-              <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
-                <span class="text-taupe small-label">PHONE</span>
-                <a href="tel:+918780432116" class="text-champagne hover:text-burgundy-light transition-colors">+91-8780432116</a>
-              </div>
-              <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
-                <span class="text-taupe small-label">GITHUB</span>
-                <a href="https://github.com/bhumika081" target="_blank" class="text-champagne hover:underline font-semibold">github.com/bhumika081</a>
-              </div>
-            </div>
-
-            <!-- Direct WhatsApp CTA inside card -->
-            <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20let's%20discuss%20a%20project" target="_blank" class="mt-6 w-full py-3.5 rounded-xl bg-burgundy hover:bg-burgundy-hover text-champagne btn-text text-xs tracking-wider text-center block transition-all shadow-md">
-              <i class="fa-brands fa-whatsapp text-sm mr-1"></i> Quick WhatsApp Message
-            </a>
-
-          </div>
-        </div>
-
       </div>
 
     </div>
   </section>
 
-  <!-- ================= MARQUEE SCROLLING BANNER ================= -->
-  <div class="bg-mceblack text-champagne py-4 overflow-hidden border-y border-espresso-light small-label text-xs sm:text-sm tracking-widest select-none">
-    <div class="animate-marquee whitespace-nowrap">
-      <span class="mx-6 text-burgundy-light">TURNING IDEAS INTO IMPACTFUL DIGITAL SOLUTIONS</span>
-      <span class="mx-6 text-taupe">✱</span>
-      <span class="mx-6 text-champagne">4+ YEARS PROFESSIONAL EXPERIENCE</span>
-      <span class="mx-6 text-taupe">✱</span>
-      <span class="mx-6 text-olive">SHOPIFY & AI APP DEVELOPMENT</span>
-      <span class="mx-6 text-taupe">✱</span>
-      <span class="mx-6 text-champagne">REACT & NEXT.JS HIGH PERFORMANCE</span>
-      <span class="mx-6 text-taupe">✱</span>
-      <span class="mx-6 text-burgundy-light">CUSTOM WORDPRESS & PHP PORTALS</span>
-      <span class="mx-6 text-taupe">✱</span>
-      <span class="mx-6 text-olive">AVAILABLE FOR GLOBAL FREELANCE</span>
-      <span class="mx-6 text-taupe">✱</span>
-      <span class="mx-6 text-burgundy-light">TURNING IDEAS INTO IMPACTFUL DIGITAL SOLUTIONS</span>
-      <span class="mx-6 text-taupe">✱</span>
-      <span class="mx-6 text-champagne">4+ YEARS PROFESSIONAL EXPERIENCE</span>
-      <span class="mx-6 text-taupe">✱</span>
-      <span class="mx-6 text-olive">SHOPIFY & AI APP DEVELOPMENT</span>
-      <span class="mx-6 text-taupe">✱</span>
-    </div>
-  </div>
-
-  <!-- ================= MY SERVICES SECTION ================= -->
-  <section id="services" class="py-24 max-w-7xl mx-auto px-4 sm:px-8">
+  <!-- ================= FEATURED CASE STUDIES (PROBLEM -> ROLE -> OUTCOME) ================= -->
+  <section id="case-studies" class="py-24 max-w-7xl mx-auto px-4 sm:px-8 border-b border-theme-border">
     
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-taupe-border">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
       <div>
-        <span class="small-label text-xs text-burgundy font-bold">/02. CAPABILITIES</span>
-        <!-- Section Heading: Space Grotesk 600 -->
-        <h2 class="section-heading text-4xl sm:text-5xl text-mceblack mt-2">My Services</h2>
+        <span class="text-xs font-mono uppercase tracking-wider text-theme-accent font-semibold">// 02. IN-DEPTH CASE STUDIES</span>
+        <h2 class="font-heading font-semibold text-3xl sm:text-5xl text-white mt-2">Standout Engineering Work</h2>
+        <p class="text-theme-text text-sm sm:text-base mt-3 max-w-2xl">
+          Deep-dive explorations of complex challenges, my exact architectural contributions, and the production outcomes delivered.
+        </p>
       </div>
-      <!-- Paragraph: Inter 400 -->
-      <p class="mt-4 md:mt-0 body-text text-sm text-espresso-light max-w-md">
-        End-to-end engineering from concept and database design to modern frontends, AI integrations, and high-converting stores.
+      <a href="#all-projects" class="mt-6 md:mt-0 inline-flex items-center gap-2 text-xs font-mono uppercase text-theme-accent hover:underline font-semibold">
+        <span>View all 17 projects</span>
+        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+      </a>
+    </div>
+
+    <!-- Case Studies Stack -->
+    <div class="space-y-12">
+
+      <!-- Case Study 1: ShopPilot AI (Featured Shopify App Store) -->
+      <div class="rounded-3xl bg-theme-card border border-theme-border overflow-hidden glow-lime-card transition-all p-8 sm:p-12">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-theme-border/80">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-theme-accent/10 border border-theme-accent/30 text-theme-accent font-semibold">
+              ★ FEATURED CASE STUDY
+            </span>
+            <span class="text-xs font-mono text-theme-muted uppercase tracking-wider">SHOPIFY APP STORE</span>
+          </div>
+          <a href="https://apps.shopify.com/shoppilot-ai-1" target="_blank" class="px-4 py-2 rounded-lg bg-theme-accent hover:bg-theme-accenthover text-black text-xs font-semibold flex items-center gap-2 transition-all">
+            <span>View Published App</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-start">
+          <div class="lg:col-span-5">
+            <h3 class="font-heading font-bold text-3xl text-white">ShopPilot AI</h3>
+            <p class="text-sm font-mono text-theme-accent mt-1">Official Shopify Merchant Automation App</p>
+            
+            <p class="mt-4 text-sm text-theme-text leading-relaxed">
+              An AI-powered merchant copilot engineered to automate repetitive store operations, catalog enrichment, SEO meta-descriptions, and customer response workflows directly inside the Shopify admin dashboard.
+            </p>
+
+            <div class="mt-6 pt-6 border-t border-theme-border/60">
+              <div class="text-xs font-mono uppercase tracking-wider text-theme-muted mb-2">TECH STACK</div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">Shopify App Bridge</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">React Polaris UI</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">OpenAI LLM API</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">Shopify Webhooks</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">GraphQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Structured 3-Question Grid -->
+          <div class="lg:col-span-7 grid grid-cols-1 gap-4">
+            <div class="p-5 rounded-xl bg-theme-bg/60 border border-theme-border">
+              <div class="text-xs font-mono font-semibold text-theme-muted uppercase tracking-wider flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> The Problem
+              </div>
+              <p class="text-sm text-theme-text leading-relaxed">
+                Shopify store owners spend countless hours each week writing repetitive product descriptions, optimizing tags for search engines, and answering routine customer queries manually, pulling focus away from store growth.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-theme-bg/60 border border-theme-border">
+              <div class="text-xs font-mono font-semibold text-theme-accent uppercase tracking-wider flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-code text-theme-accent"></i> What I Personally Engineered
+              </div>
+              <p class="text-sm text-theme-text leading-relaxed">
+                Engineered the native Polaris UI and App Bridge lifecycle, integrated OAuth authentication, connected OpenAI API pipelines with prompt safety layers, and created automated background webhook handlers for instant sync with merchant product catalogs.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-theme-bg/60 border border-theme-border">
+              <div class="text-xs font-mono font-semibold text-emerald-400 uppercase tracking-wider flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i> The Production Outcome
+              </div>
+              <p class="text-sm text-theme-text leading-relaxed">
+                Successfully published on the official Shopify App Store, passing all rigorous Shopify App Review security, performance, and UI standards. Enabled merchants to automate catalog enrichment with zero store frontend overhead.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 2: Ethical Hire (CodeIgniter 4 Job & Subscription Portal) -->
+      <div class="rounded-3xl bg-theme-card border border-theme-border overflow-hidden glow-lime-card transition-all p-8 sm:p-12">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-theme-border/80">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-theme-accent/10 border border-theme-accent/30 text-theme-accent font-semibold">
+              ★ ENTERPRISE PORTAL
+            </span>
+            <span class="text-xs font-mono text-theme-muted uppercase tracking-wider">AUSTRALIA (.COM.AU)</span>
+          </div>
+          <a href="https://ethicalhire.com.au" target="_blank" class="px-4 py-2 rounded-lg bg-theme-accent hover:bg-theme-accenthover text-black text-xs font-semibold flex items-center gap-2 transition-all">
+            <span>Visit Live Platform</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-start">
+          <div class="lg:col-span-5">
+            <h3 class="font-heading font-bold text-3xl text-white">Ethical Hire</h3>
+            <p class="text-sm font-mono text-theme-accent mt-1">Full-Scale Australian Recruitment & Subscription Portal</p>
+            
+            <p class="mt-4 text-sm text-theme-text leading-relaxed">
+              A bespoke recruitment platform serving the Australian market with multi-tier subscription billing, geo-radius candidate searching, and fine-grained role-based access control.
+            </p>
+
+            <div class="mt-6 pt-6 border-t border-theme-border/60">
+              <div class="text-xs font-mono uppercase tracking-wider text-theme-muted mb-2">TECH STACK</div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">CodeIgniter 4 (PHP)</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">MySQL Database</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">Stripe Subscriptions</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">Google Maps API</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">RBAC Security</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 grid grid-cols-1 gap-4">
+            <div class="p-5 rounded-xl bg-theme-bg/60 border border-theme-border">
+              <div class="text-xs font-mono font-semibold text-theme-muted uppercase tracking-wider flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> The Problem
+              </div>
+              <p class="text-sm text-theme-text leading-relaxed">
+                The client required a custom Australian job portal that could handle distinct user permissions for Job Seekers, Employers, and Admins while supporting recurring Stripe billing tiers and location-sensitive job filtering across Australian cities.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-theme-bg/60 border border-theme-border">
+              <div class="text-xs font-mono font-semibold text-theme-accent uppercase tracking-wider flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-code text-theme-accent"></i> What I Personally Engineered
+              </div>
+              <p class="text-sm text-theme-text leading-relaxed">
+                Architected the relational schema in MySQL, implemented custom MVC controllers in CodeIgniter 4, built Stripe recurring subscription webhooks with failure retries, and integrated Google Maps Geocoding API for radius-based search filters.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-theme-bg/60 border border-theme-border">
+              <div class="text-xs font-mono font-semibold text-emerald-400 uppercase tracking-wider flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i> The Production Outcome
+              </div>
+              <p class="text-sm text-theme-text leading-relaxed">
+                Delivered a high-uptime, scalable recruitment platform powering active job postings across Australia with automated revenue generation through Stripe subscription tiers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 3: Patelco Credit Union (Angular FinTech Calculator & Portal) -->
+      <div class="rounded-3xl bg-theme-card border border-theme-border overflow-hidden glow-lime-card transition-all p-8 sm:p-12">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-theme-border/80">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-theme-accent/10 border border-theme-accent/30 text-theme-accent font-semibold">
+              ★ FINTECH & BANKING
+            </span>
+            <span class="text-xs font-mono text-theme-muted uppercase tracking-wider">USA (.ORG)</span>
+          </div>
+          <a href="https://patelco.org" target="_blank" class="px-4 py-2 rounded-lg bg-theme-accent hover:bg-theme-accenthover text-black text-xs font-semibold flex items-center gap-2 transition-all">
+            <span>Visit Official Site</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-start">
+          <div class="lg:col-span-5">
+            <h3 class="font-heading font-bold text-3xl text-white">Patelco Credit Union</h3>
+            <p class="text-sm font-mono text-theme-accent mt-1">Angular Home Equity Loan Calculator & Web Ecosystem</p>
+            
+            <p class="mt-4 text-sm text-theme-text leading-relaxed">
+              Interactive financial calculation tools and responsive CMS development for a leading member-owned financial cooperative in the United States.
+            </p>
+
+            <div class="mt-6 pt-6 border-t border-theme-border/60">
+              <div class="text-xs font-mono uppercase tracking-wider text-theme-muted mb-2">TECH STACK</div>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">Angular</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">TypeScript</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">WordPress & ACF Pro</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">Financial Amortization</span>
+                <span class="px-2.5 py-1 text-xs rounded bg-theme-bg border border-theme-border text-white font-mono">Bookly API</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 grid grid-cols-1 gap-4">
+            <div class="p-5 rounded-xl bg-theme-bg/60 border border-theme-border">
+              <div class="text-xs font-mono font-semibold text-theme-muted uppercase tracking-wider flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> The Problem
+              </div>
+              <p class="text-sm text-theme-text leading-relaxed">
+                Patelco members needed a frictionless, dynamic way to calculate potential home equity loans and monthly interest projections without undergoing complex multi-page loan applications.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-theme-bg/60 border border-theme-border">
+              <div class="text-xs font-mono font-semibold text-theme-accent uppercase tracking-wider flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-code text-theme-accent"></i> What I Personally Engineered
+              </div>
+              <p class="text-sm text-theme-text leading-relaxed">
+                Built an interactive loan calculator component in Angular featuring dynamic interest sliders, amortization schedules, and real-time validation; configured customized WordPress meta boxes and Bookly appointment scheduling for branches.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-theme-bg/60 border border-theme-border">
+              <div class="text-xs font-mono font-semibold text-emerald-400 uppercase tracking-wider flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i> The Production Outcome
+              </div>
+              <p class="text-sm text-theme-text leading-relaxed">
+                Significantly reduced customer pre-qualification friction and provided bank members with instantaneous, transparent financial calculations directly on web and mobile devices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= VISUAL SKILLS & TECHNOLOGY STACK ================= -->
+  <section id="tech-stack" class="py-24 max-w-7xl mx-auto px-4 sm:px-8 border-b border-theme-border">
+    
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-mono uppercase tracking-wider text-theme-accent font-semibold">// 03. TECHNICAL CAPABILITIES</span>
+      <h2 class="font-heading font-semibold text-3xl sm:text-5xl text-white mt-2">Comprehensive Tech Stack</h2>
+      <p class="text-theme-text text-sm sm:text-base mt-3">
+        Categorized technologies I have actively used to engineer production systems.
       </p>
     </div>
 
-    <!-- Services Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- 1. Web Development -->
-      <div class="p-8 bg-champagne-card rounded-2xl border border-taupe-border hover:border-burgundy/40 transition-all flex flex-col justify-between group shadow-sm">
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <span class="section-heading text-black text-sm">01</span>
-            <span class="small-label text-[10px] px-2.5 py-0.5 rounded editorial-tag text-espresso">FRONTEND</span>
-          </div>
-          <h3 class="section-heading text-xl text-mceblack group-hover:text-burgundy transition-colors">
-            Modern Web Development
-          </h3>
-          <p class="mt-3 body-text text-sm text-espresso leading-relaxed">
-            Crafting responsive, lightning-fast web applications using React JS, Next JS (SSR/SSG), and modern CSS frameworks like Tailwind and Bootstrap.
-          </p>
+      <!-- Category 1: Frontend -->
+      <div class="p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-borderlight transition-all">
+        <div class="w-10 h-10 rounded-xl bg-theme-bg border border-theme-border flex items-center justify-center text-theme-accent text-lg mb-4">
+          <i class="fa-brands fa-react"></i>
         </div>
-        <div class="mt-6 pt-4 border-t border-taupe-border/60 flex flex-wrap gap-1.5 nav-text text-[11px] text-espresso">
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">React JS</span>
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">Next JS</span>
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">JavaScript ES6+</span>
+        <h3 class="font-heading font-semibold text-lg text-white">Frontend Architecture</h3>
+        <p class="text-xs text-theme-muted mt-1 mb-4">Component-driven, responsive, accessible interfaces</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">React.js</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Next.js (App Router/SSR)</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Angular</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">TypeScript</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Tailwind CSS</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Bootstrap</span>
         </div>
       </div>
 
-      <!-- 2. Shopify & AI App Dev -->
-      <div class="p-8 bg-champagne-card rounded-2xl border-2 border-burgundy/30 hover:border-burgundy transition-all flex flex-col justify-between group shadow-md relative">
-        <div class="absolute -top-3 right-6 bg-burgundy text-champagne small-label text-[9px] px-2 py-0.5 rounded shadow">
-          FEATURED
+      <!-- Category 2: Backend -->
+      <div class="p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-borderlight transition-all">
+        <div class="w-10 h-10 rounded-xl bg-theme-bg border border-theme-border flex items-center justify-center text-theme-accent text-lg mb-4">
+          <i class="fa-brands fa-php"></i>
         </div>
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <span class="section-heading text-burgundy text-sm font-bold">02</span>
-            <span class="small-label text-[10px] px-2.5 py-0.5 rounded editorial-tag text-burgundy font-bold">SHOPIFY & AI</span>
-          </div>
-          <h3 class="section-heading text-xl text-mceblack group-hover:text-burgundy transition-colors">
-            Shopify & AI App Development
-          </h3>
-          <p class="mt-3 body-text text-sm text-espresso leading-relaxed">
-            Specialized in public and private Shopify App development (Polaris UI, App Bridge, GraphQL, Webhooks) and AI features (like ShopPilot AI).
-          </p>
-        </div>
-        <div class="mt-6 pt-4 border-t border-taupe-border/60 flex flex-wrap gap-1.5 nav-text text-[11px] text-espresso">
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">Shopify App Bridge</span>
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">Polaris</span>
-          <span class="bg-white/80 border border-burgundy/40 text-burgundy font-semibold px-2.5 py-0.5 rounded">AI / LLM API</span>
+        <h3 class="font-heading font-semibold text-lg text-white">Backend & MVC</h3>
+        <p class="text-xs text-theme-muted mt-1 mb-4">Scalable server logic, security, and authentication</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">PHP 8+</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">CodeIgniter 4</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">MVC Architecture</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Node.js (App Backend)</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Role-Based Access (RBAC)</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">RESTful APIs</span>
         </div>
       </div>
 
-      <!-- 3. E-commerce Storefronts -->
-      <div class="p-8 bg-champagne-card rounded-2xl border border-taupe-border hover:border-burgundy/40 transition-all flex flex-col justify-between group shadow-sm">
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <span class="section-heading text-black text-sm">03</span>
-            <span class="small-label text-[10px] px-2.5 py-0.5 rounded editorial-tag text-espresso">COMMERCE</span>
-          </div>
-          <h3 class="section-heading text-xl text-mceblack group-hover:text-burgundy transition-colors">
-            E-Commerce Storefronts
-          </h3>
-          <p class="mt-3 body-text text-sm text-espresso leading-relaxed">
-            Building high-converting WooCommerce, Magento, and Shopify Liquid stores with multi-currency, custom filtering, and Stripe/PayPal payments.
-          </p>
+      <!-- Category 3: E-Commerce & Shopify -->
+      <div class="p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-borderlight transition-all">
+        <div class="w-10 h-10 rounded-xl bg-theme-bg border border-theme-border flex items-center justify-center text-theme-accent text-lg mb-4">
+          <i class="fa-brands fa-shopify"></i>
         </div>
-        <div class="mt-6 pt-4 border-t border-taupe-border/60 flex flex-wrap gap-1.5 nav-text text-[11px] text-espresso">
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">WooCommerce</span>
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">Liquid</span>
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">Stripe API</span>
+        <h3 class="font-heading font-semibold text-lg text-white">E-Commerce & Shopify Apps</h3>
+        <p class="text-xs text-theme-muted mt-1 mb-4">Published apps, custom storefronts, and conversion CRO</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-accent border border-theme-accent/30 font-medium">Shopify App Bridge</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Polaris UI</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Custom Liquid</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">WooCommerce</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Magento</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Checkout Optimization</span>
         </div>
       </div>
 
-      <!-- 4. Custom Web Applications -->
-      <div class="p-8 bg-champagne-card rounded-2xl border border-taupe-border hover:border-burgundy/40 transition-all flex flex-col justify-between group shadow-sm">
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <span class="section-heading text-black text-sm">04</span>
-            <span class="small-label text-[10px] px-2.5 py-0.5 rounded editorial-tag text-espresso">BACKEND / MVC</span>
-          </div>
-          <h3 class="section-heading text-xl text-mceblack group-hover:text-burgundy transition-colors">
-            Custom Web Applications
-          </h3>
-          <p class="mt-3 body-text text-sm text-espresso leading-relaxed">
-            Architecting robust web applications and portals using CodeIgniter 4, Angular, PHP, and MySQL with role-based access control and admin panels.
-          </p>
+      <!-- Category 4: Database -->
+      <div class="p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-borderlight transition-all">
+        <div class="w-10 h-10 rounded-xl bg-theme-bg border border-theme-border flex items-center justify-center text-theme-accent text-lg mb-4">
+          <i class="fa-solid fa-database"></i>
         </div>
-        <div class="mt-6 pt-4 border-t border-taupe-border/60 flex flex-wrap gap-1.5 nav-text text-[11px] text-espresso">
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">CodeIgniter 4</span>
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">Angular</span>
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">MySQL</span>
+        <h3 class="font-heading font-semibold text-lg text-white">Databases & Data Modeling</h3>
+        <p class="text-xs text-theme-muted mt-1 mb-4">Structured relational databases and query optimization</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">MySQL</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Relational Schema Design</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Query Indexing & Optimization</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">JSON Data Schemas</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Database Migrations</span>
         </div>
       </div>
 
-      <!-- 5. API Integrations -->
-      <div class="p-8 bg-champagne-card rounded-2xl border border-taupe-border hover:border-burgundy/40 transition-all flex flex-col justify-between group shadow-sm">
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <span class="section-heading text-black text-sm">05</span>
-            <span class="small-label text-[10px] px-2.5 py-0.5 rounded editorial-tag text-espresso">SYSTEMS</span>
-          </div>
-          <h3 class="section-heading text-xl text-mceblack group-hover:text-burgundy transition-colors">
-            API Integrations & Tools
-          </h3>
-          <p class="mt-3 body-text text-sm text-espresso leading-relaxed">
-            Connecting third-party services including Google Maps API, Bookly booking plugins, payment gateways, REST endpoints, and custom webhooks.
-          </p>
+      <!-- Category 5: APIs & Integrations -->
+      <div class="p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-borderlight transition-all">
+        <div class="w-10 h-10 rounded-xl bg-theme-bg border border-theme-border flex items-center justify-center text-theme-accent text-lg mb-4">
+          <i class="fa-solid fa-network-wired"></i>
         </div>
-        <div class="mt-6 pt-4 border-t border-taupe-border/60 flex flex-wrap gap-1.5 nav-text text-[11px] text-espresso">
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">Google Maps</span>
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">REST APIs</span>
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">Postman</span>
+        <h3 class="font-heading font-semibold text-lg text-white">APIs & Integrations</h3>
+        <p class="text-xs text-theme-muted mt-1 mb-4">Third-party gateways, webhooks, and AI pipelines</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-accent border border-theme-accent/30 font-medium">OpenAI / LLM API</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Stripe Subscriptions</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">PayPal Gateway</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Google Maps API</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Shopify Webhooks</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Bookly Appointments</span>
         </div>
       </div>
 
-      <!-- 6. WordPress CMS & Speed -->
-      <div class="p-8 bg-champagne-card rounded-2xl border border-taupe-border hover:border-burgundy/40 transition-all flex flex-col justify-between group shadow-sm">
-        <div>
-          <div class="flex items-center justify-between mb-6">
-            <span class="section-heading text-black text-sm">06</span>
-            <span class="small-label text-[10px] px-2.5 py-0.5 rounded editorial-tag text-espresso">OPTIMIZATION</span>
-          </div>
-          <h3 class="section-heading text-xl text-mceblack group-hover:text-burgundy transition-colors">
-            WordPress CMS & Speed Tuning
-          </h3>
-          <p class="mt-3 body-text text-sm text-espresso leading-relaxed">
-            Custom theme and plugin authoring with ACF Pro, core PHP to WordPress migrations, and Core Web Vitals speed optimization for top rankings.
-          </p>
+      <!-- Category 6: Tools & Optimization -->
+      <div class="p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-borderlight transition-all">
+        <div class="w-10 h-10 rounded-xl bg-theme-bg border border-theme-border flex items-center justify-center text-theme-accent text-lg mb-4">
+          <i class="fa-solid fa-gauge-high"></i>
         </div>
-        <div class="mt-6 pt-4 border-t border-taupe-border/60 flex flex-wrap gap-1.5 nav-text text-[11px] text-espresso">
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">ACF Pro</span>
-          <span class="bg-white/80 border border-olive/50 text-olive font-semibold px-2.5 py-0.5 rounded">Core Web Vitals</span>
-          <span class="bg-white/80 border border-taupe-border px-2.5 py-0.5 rounded">Speed Boost</span>
+        <h3 class="font-heading font-semibold text-lg text-white">Tools & Performance Tuning</h3>
+        <p class="text-xs text-theme-muted mt-1 mb-4">CI/CD, Core Web Vitals, and team collaboration</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-accent border border-theme-accent/30 font-medium">Core Web Vitals (90+)</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Git & GitHub</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Postman</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">VS Code</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Asana & Slack</span>
+          <span class="px-2.5 py-1 text-xs rounded bg-theme-bg text-theme-text border border-theme-border">Speed Optimization</span>
         </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ================= CHECKOUT MY WORKS (MCE BLACK & ESPRESSO DARK SECTION) ================= -->
-  <section id="works" class="py-24 bg-mceblack text-champagne noise-bg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      
-      <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-espresso-light">
-        <div>
-          <span class="small-label text-xs text-burgundy-light font-bold">/03. SELECTED PORTFOLIO</span>
-          <h2 class="section-heading text-4xl sm:text-5xl text-champagne mt-2">Checkout My Works</h2>
-        </div>
-
-        <!-- Filter Buttons (Buttons: Inter 600) -->
-        <div class="mt-6 md:mt-0 flex flex-wrap gap-2" id="filterContainer">
-          <button class="filter-btn active px-3.5 py-1.5 text-xs btn-text uppercase tracking-wider bg-burgundy text-champagne rounded transition-all" data-filter="all">All (17)</button>
-          <button class="filter-btn px-3.5 py-1.5 text-xs btn-text uppercase tracking-wider bg-espresso text-taupe-light hover:bg-espresso-light rounded transition-all" data-filter="shopify">Shopify & eCommerce</button>
-          <button class="filter-btn px-3.5 py-1.5 text-xs btn-text uppercase tracking-wider bg-espresso text-taupe-light hover:bg-espresso-light rounded transition-all" data-filter="react">React / Next.js</button>
-          <button class="filter-btn px-3.5 py-1.5 text-xs btn-text uppercase tracking-wider bg-espresso text-taupe-light hover:bg-espresso-light rounded transition-all" data-filter="wordpress">WordPress & PHP</button>
-          <button class="filter-btn px-3.5 py-1.5 text-xs btn-text uppercase tracking-wider bg-espresso text-taupe-light hover:bg-espresso-light rounded transition-all" data-filter="portal">Enterprise Portals</button>
-        </div>
-      </div>
-
-      <!-- Works Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
-
-        <!-- 1. ShopPilot AI -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="shopify react">
-          <div class="h-48 bg-gradient-to-tr from-burgundy-dark via-espresso to-olive p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">SHOPIFY APP STORE</span>
-              <span class="text-taupe small-label text-xs">2024</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">ShopPilot AI</h3>
-              <p class="body-text text-xs text-taupe-light">AI Merchant Automation Assistant</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-burgundy/30 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Engineered an AI-powered merchant app published on the official Shopify App Store. Built with Shopify Polaris, App Bridge, and OpenAI API to automate product listings and customer operations.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Shopify App Bridge</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Polaris UI</span>
-                <span class="bg-espresso/60 border border-burgundy/40 px-2.5 py-1 rounded text-burgundy-light font-semibold">AI / LLM</span>
-              </div>
-            </div>
-            <a href="https://apps.shopify.com/shoppilot-ai-1" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>View On Shopify App Store</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 2. Tesselaar Flowers -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="shopify wordpress">
-          <div class="h-48 bg-gradient-to-tr from-burgundy via-espresso-deep to-taupe-muted p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">AUSTRALIA (.AU)</span>
-              <span class="text-taupe small-label text-xs">ECOMMERCE</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">Tesselaar Flowers</h3>
-              <p class="body-text text-xs text-taupe-light">Premier Wholesale & Retail Portal</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-burgundy/20 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Engineered eCommerce platform for Australia's largest flower grower and wholesaler. Features multi-tier wholesale/retail pricing, dynamic inventory browsing, and fast mobile checkout.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">WooCommerce</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Wholesale Logic</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Speed Boost</span>
-              </div>
-            </div>
-            <a href="https://tesselaarflowers.au/" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Website</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 3. Maguire Supplies -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="shopify wordpress">
-          <div class="h-48 bg-gradient-to-tr from-espresso-deep via-espresso to-olive p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">IRELAND (.IE)</span>
-              <span class="text-taupe small-label text-xs">HARDWARE</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">Maguire Supplies</h3>
-              <p class="body-text text-xs text-taupe-light">Agricultural & Hardware Supplies</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-olive/20 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Engineered an online store for agricultural machinery, farm supplies, and hardware in Ireland. Custom category filtering, European VAT rules, and integrated Stripe/PayPal checkout.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Custom PHP</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">WooCommerce</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Stripe Gateway</span>
-              </div>
-            </div>
-            <a href="https://maguiresupplies.ie" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Website</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 4. Javia International -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="wordpress portal">
-          <div class="h-48 bg-gradient-to-tr from-espresso-deep via-burgundy-dark to-taupe-muted p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">GLOBAL EXPORT</span>
-              <span class="text-taupe small-label text-xs">CORPORATE</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">Javia International</h3>
-              <p class="body-text text-xs text-taupe-light">Multinational Trade & Export Platform</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-burgundy/20 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Built an international business platform showcasing global product portfolios, trade compliance, downloadable catalogues, and localized lead capture funnels for overseas buyers.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">WordPress CMS</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Custom ACF Pro</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">International SEO</span>
-              </div>
-            </div>
-            <a href="https://javiainternational.com/" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Website</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 5. NVD Technology -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="react portal">
-          <div class="h-48 bg-gradient-to-tr from-mceblack-deep via-espresso-deep to-olive p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">IT CONSULTING</span>
-              <span class="text-taupe small-label text-xs">TECH</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">NVD Technology</h3>
-              <p class="body-text text-xs text-taupe-light">Digital Services & Enterprise Tech</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-olive/20 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Designed and built a corporate technology consulting web app showcasing software engineering services, cloud migrations, and tech consultation with modular interactive UI components.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Modern Frontend</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">CSS Animations</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Speed Score 95+</span>
-              </div>
-            </div>
-            <a href="https://nvdtechnology.com/" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Website</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 6. Ethical Hire (Australia) -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="portal wordpress">
-          <div class="h-48 bg-gradient-to-tr from-espresso-deep via-olive to-taupe-muted p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">AUSTRALIA (.COM.AU)</span>
-              <span class="text-taupe small-label text-xs">PORTAL</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">Ethical Hire</h3>
-              <p class="body-text text-xs text-taupe-light">CodeIgniter 4 Recruitment Platform</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-olive/20 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Full-scale recruitment web app engineered on CodeIgniter 4. Features distinct role-based permissions (Job Seekers, Employers, Admins), Stripe subscription billing, and Google Maps radius search.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">CodeIgniter 4</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Stripe Subscriptions</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Google Maps API</span>
-              </div>
-            </div>
-            <a href="https://ethicalhire.com.au" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Portal</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 7. Patelco Credit Union (USA) -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="portal react wordpress">
-          <div class="h-48 bg-gradient-to-tr from-espresso-deep via-burgundy-dark to-mceblack p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">USA (.ORG)</span>
-              <span class="text-taupe small-label text-xs">FINTECH</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">Patelco Credit Union</h3>
-              <p class="body-text text-xs text-taupe-light">Angular Loan Calculator & Portal</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-burgundy/20 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Engineered interactive Home Equity loan calculation tool in Angular with dynamic sliders for interest rates and amortizations. Enhanced WordPress CMS with ACF Pro and Bookly appointment scheduling.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Angular</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Financial Logic</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">WordPress & ACF</span>
-              </div>
-            </div>
-            <a href="https://patelco.org" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Official Site</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 8. Wellness & Health 4 All -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="react">
-          <div class="h-48 bg-gradient-to-tr from-olive via-espresso to-champagne/20 p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">REACT JS</span>
-              <span class="text-taupe small-label text-xs">WELLNESS</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">Wellness & Health 4 All</h3>
-              <p class="body-text text-xs text-taupe-light">Retreat & Meditation Discovery</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-olive/20 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Developed dynamic frontend SPA in React JS for international meditation retreats and wellness programs. Built with modular component architecture, intuitive filters, and seamless navigation.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">React JS</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">SPA Architecture</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Responsive UI</span>
-              </div>
-            </div>
-            <a href="https://wellnessandhealth4all.com/" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Platform</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 9. TRLIT Solutions Mail App -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="react portal">
-          <div class="h-48 bg-gradient-to-tr from-espresso via-burgundy-dark to-mceblack p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">NEXT.JS SSR</span>
-              <span class="text-taupe small-label text-xs">SAAS APP</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">TRLIT Mail Client</h3>
-              <p class="body-text text-xs text-taupe-light">Server-Rendered Webmail Client</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-burgundy/20 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Engineered webmail client using Next JS with server-side rendering for improved speed and authentication security. Includes full inbox dashboard, mail composer, and email folder management.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Next JS</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">SSR</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">JWT Auth</span>
-              </div>
-            </div>
-            <a href="https://mail.trlitsolutions.com" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Webmail Client</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 10. SparknFly (Canada) -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="shopify wordpress">
-          <div class="h-48 bg-gradient-to-tr from-olive via-espresso-deep to-taupe-muted p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">CANADA (.CA)</span>
-              <span class="text-taupe small-label text-xs">CUSTOM PHP</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">SparknFly</h3>
-              <p class="body-text text-xs text-taupe-light">Custom PHP Admin & E-Commerce</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-olive/20 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Designed a custom PHP admin panel for product inventory, user moderation, and site settings, combined with an age-gated online dispensary storefront with price and category filtering.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Custom Admin</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Core PHP</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">WordPress</span>
-              </div>
-            </div>
-            <a href="https://sparknfly.ca" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Website</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 11. WebRX Pharma (UK) -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="wordpress shopify">
-          <div class="h-48 bg-gradient-to-tr from-burgundy-dark via-espresso to-olive p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">UK (.CO.UK)</span>
-              <span class="text-taupe small-label text-xs">HEALTHCARE</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">WebRX Pharma</h3>
-              <p class="body-text text-xs text-taupe-light">Online Pharmacy & Aesthetic Medications</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-burgundy/20 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                UK pharmaceutical platform providing men's and women's healthcare and aesthetic medications to doctors and patients across the UK with secure, compliant consultation flows.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">WordPress</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Healthcare UX</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">UK Market</span>
-              </div>
-            </div>
-            <a href="https://webrx.co.uk" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Website</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 12. La Fleur De Luxe -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="shopify wordpress">
-          <div class="h-48 bg-gradient-to-tr from-espresso-deep via-burgundy-dark to-taupe-muted p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">LUXURY BRAND</span>
-              <span class="text-taupe small-label text-xs">GIFTS</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">La Fleur De Luxe</h3>
-              <p class="body-text text-xs text-taupe-light">Preserved Roses & Customizable Gift Boxes</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-burgundy/20 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Luxury eCommerce platform specializing in long-lasting preserved roses and customizable floral boxes for luxury weddings, corporate events, and anniversary gifts.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">eCommerce</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Custom Box UI</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Luxury Aesthetics</span>
-              </div>
-            </div>
-            <a href="https://lafleurdeluxe.com" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Website</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 13. The Spa of Charleston -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="wordpress shopify">
-          <div class="h-48 bg-gradient-to-tr from-burgundy-dark via-espresso to-champagne/20 p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">USA (CHARLESTON, SC)</span>
-              <span class="text-taupe small-label text-xs">SPA & WELLNESS</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">The Spa of Charleston</h3>
-              <p class="body-text text-xs text-taupe-light">Luxury Day Spa & Appointment Booking</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-burgundy/25 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Engineered the web presence for premier historic luxury day spa in Charleston, South Carolina. Implemented treatment discovery menus, gift card commerce, and seamless online booking integration.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">WordPress & ACF</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Online Booking</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Gift Card Sales</span>
-              </div>
-            </div>
-            <a href="https://www.thespaofcharleston.com/" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Website</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 14. Retail Matchmaker -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="portal react">
-          <div class="h-48 bg-gradient-to-tr from-espresso-deep via-olive to-burgundy-dark p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">B2B PLATFORM</span>
-              <span class="text-taupe small-label text-xs">MATCHMAKING</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">Retail Matchmaker</h3>
-              <p class="body-text text-xs text-taupe-light">Connecting Retail Buyers & Emerging Brands</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-olive/25 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                B2B matchmaking and discovery portal bridging consumer product brands with retail store buyers. Features brand directory portfolios, onboarding intake flows, and custom lead generation.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">B2B Portal</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Matchmaking Flows</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Custom Web App</span>
-              </div>
-            </div>
-            <a href="https://www.retailmatchmaker.com/" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Website</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 15. Halal 4 All Shop -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="shopify wordpress">
-          <div class="h-48 bg-gradient-to-tr from-olive via-espresso to-taupe-muted p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">ECOMMERCE</span>
-              <span class="text-taupe small-label text-xs">GROCERY & FOOD</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">Halal 4 All Shop</h3>
-              <p class="body-text text-xs text-taupe-light">Halal-Certified Grocery & Foods Store</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-olive/30 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Online eCommerce storefront for 100% Halal-certified specialty foods, fresh meats, and grocery goods. Built with fast multi-category filtering, inventory management, and secure checkout.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">eCommerce Store</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Grocery Filtering</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Stripe / Payments</span>
-              </div>
-            </div>
-            <a href="https://www.halal4allshop.com/" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Website</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 16. My Jewellery Story -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="shopify wordpress">
-          <div class="h-48 bg-gradient-to-tr from-burgundy-dark via-espresso-deep to-taupe p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">AUSTRALIA (.COM.AU)</span>
-              <span class="text-taupe small-label text-xs">FINE JEWELRY</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">My Jewellery Story</h3>
-              <p class="body-text text-xs text-taupe-light">Australian Luxury Jewelry & Gemstones</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-burgundy/30 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Premium Australian online jewelry boutique showcasing sparkling crystals, pearls, and gemstone accessories. Built with high-resolution image zoom, Australian localized taxes, and smooth mobile checkout.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Jewelry eCommerce</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Luxury UI</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Australia (.au)</span>
-              </div>
-            </div>
-            <a href="https://www.myjewellerystory.com.au/" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Website</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 17. Fashion Jewellery Hub -->
-        <div class="project-card bg-mceblack-card rounded-2xl overflow-hidden border border-espresso-light hover:border-burgundy/60 transition-all flex flex-col group shadow-lg" data-category="shopify">
-          <div class="h-48 bg-gradient-to-tr from-espresso-deep via-burgundy to-olive p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="flex items-center justify-between z-10">
-              <span class="editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label">SHOPIFY STORE</span>
-              <span class="text-taupe small-label text-xs">TRENDY ACCESSORIES</span>
-            </div>
-            <div class="z-10">
-              <h3 class="section-heading text-2xl text-champagne group-hover:text-burgundy-light transition-colors">Fashion Jewellery Hub</h3>
-              <p class="body-text text-xs text-taupe-light">Trendy Lifestyle & Fashion Jewelry Store</p>
-            </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-olive/25 rounded-full blur-2xl"></div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <p class="body-text text-xs sm:text-sm text-taupe-light leading-relaxed mb-5">
-                Modern Shopify storefront engineered for trend-forward fashion jewelry and lifestyle accessories. Configured with responsive product catalogs, bundle upsells, collection filters, and instant checkout.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-6 nav-text text-[11px]">
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Shopify Theme</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Product Bundling</span>
-                <span class="bg-espresso/60 border border-espresso-light px-2.5 py-1 rounded text-taupe">Conversion CRO</span>
-              </div>
-            </div>
-            <a href="https://fashionjewelleryhub.myshopify.com/" target="_blank" class="w-full py-3 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
-              <span>Visit Live Store</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
       </div>
 
     </div>
   </section>
 
-  <!-- ================= FREELANCE PRICING PLANS ================= -->
-  <section id="pricing" class="py-24 max-w-7xl mx-auto px-4 sm:px-8">
+  <!-- ================= ALL 17 PRODUCTION PROJECTS DIRECTORY ================= -->
+  <section id="all-projects" class="py-24 max-w-7xl mx-auto px-4 sm:px-8 border-b border-theme-border">
     
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-taupe-border">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
       <div>
-        <span class="small-label text-xs text-burgundy font-bold">/04. INVESTMENT</span>
-        <h2 class="section-heading text-4xl sm:text-5xl text-mceblack mt-2">Freelance Pricing Plans</h2>
+        <span class="text-xs font-mono uppercase tracking-wider text-theme-accent font-semibold">// 04. COMPLETE PRODUCTION DIRECTORY</span>
+        <h2 class="font-heading font-semibold text-3xl sm:text-5xl text-white mt-2">All Live Projects (17)</h2>
+        <p class="text-theme-text text-sm sm:text-base mt-2">
+          Filtered by technical architecture and commercial domain.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="mt-6 md:mt-0 flex flex-wrap gap-2" id="filterContainer">
+        <button class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider bg-theme-accent text-black font-semibold transition-all" data-filter="all">All (17)</button>
+        <button class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider bg-theme-card border border-theme-border text-theme-text hover:border-theme-accent transition-all" data-filter="shopify">Shopify & eCommerce</button>
+        <button class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider bg-theme-card border border-theme-border text-theme-text hover:border-theme-accent transition-all" data-filter="react">React / Next.js</button>
+        <button class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider bg-theme-card border border-theme-border text-theme-text hover:border-theme-accent transition-all" data-filter="wordpress">WordPress & PHP</button>
+        <button class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider bg-theme-card border border-theme-border text-theme-text hover:border-theme-accent transition-all" data-filter="portal">Enterprise Portals</button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsGrid">
+
+      <!-- 1. ShopPilot AI -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="shopify react">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-accent/10 text-theme-accent font-semibold">SHOPIFY APP</span>
+            <span>2024</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">ShopPilot AI</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            AI merchant automation copilot published on the official Shopify App Store. Built with App Bridge, Polaris UI, and OpenAI API.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>Shopify App Bridge</span> • <span>Polaris</span> • <span>OpenAI</span>
+          </div>
+        </div>
+        <a href="https://apps.shopify.com/shoppilot-ai-1" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Shopify App Store</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 2. The Spa of Charleston -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="wordpress shopify">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">USA (SC)</span>
+            <span>WELLNESS</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">The Spa of Charleston</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Historic Charleston day spa web portal with online appointment booking integration, gift card commerce, and treatment menu discovery.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>WordPress</span> • <span>ACF Pro</span> • <span>Booking</span>
+          </div>
+        </div>
+        <a href="https://www.thespaofcharleston.com/" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Website</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 3. Retail Matchmaker -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="portal react">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">B2B PORTAL</span>
+            <span>MATCHMAKING</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">Retail Matchmaker</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            B2B commercial discovery platform connecting emerging product brands with retail store buyers via structured onboarding pipelines.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>B2B Portal</span> • <span>PHP</span> • <span>Workflows</span>
+          </div>
+        </div>
+        <a href="https://www.retailmatchmaker.com/" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Platform</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 4. Halal 4 All Shop -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="shopify wordpress">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">ECOMMERCE</span>
+            <span>FOOD & GROCERY</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">Halal 4 All Shop</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Online storefront for 100% Halal-certified specialty foods, fresh meats, and groceries with fast category filters and secure checkout.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>eCommerce</span> • <span>Stripe</span> • <span>Fast Filtering</span>
+          </div>
+        </div>
+        <a href="https://www.halal4allshop.com/" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Storefront</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 5. My Jewellery Story -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="shopify wordpress">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">AUSTRALIA (.AU)</span>
+            <span>FINE JEWELRY</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">My Jewellery Story</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Australian luxury jewelry eCommerce store featuring crystal and gemstone collections, high-res zoom, and Australian GST tax calculations.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>Shopify</span> • <span>Luxury UI</span> • <span>Australian Taxes</span>
+          </div>
+        </div>
+        <a href="https://www.myjewellerystory.com.au/" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Website</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 6. Fashion Jewellery Hub -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="shopify">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">SHOPIFY</span>
+            <span>ACCESSORIES</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">Fashion Jewellery Hub</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Trend-driven Shopify storefront engineered with product bundles, collection filters, and mobile conversion rate optimization.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>Shopify Theme</span> • <span>Bundles</span> • <span>CRO</span>
+          </div>
+        </div>
+        <a href="https://fashionjewelleryhub.myshopify.com/" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Store</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 7. Tesselaar Flowers -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="shopify wordpress">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">AUSTRALIA (.AU)</span>
+            <span>WHOLESALE</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">Tesselaar Flowers</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Australia’s leading flower grower and wholesaler. Features multi-tier wholesale/retail pricing, dynamic inventory, and fast mobile browsing.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>WooCommerce</span> • <span>Wholesale Logic</span> • <span>Speed Boost</span>
+          </div>
+        </div>
+        <a href="https://tesselaarflowers.au/" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Website</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 8. Maguire Supplies -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="shopify wordpress">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">IRELAND (.IE)</span>
+            <span>HARDWARE</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">Maguire Supplies</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            eCommerce storefront for farm machinery and hardware supplies in Ireland with spec filtering, European VAT rules, and Stripe checkout.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>PHP / WooCommerce</span> • <span>Stripe</span> • <span>Ireland Tax</span>
+          </div>
+        </div>
+        <a href="https://maguiresupplies.ie" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Website</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 9. Javia International -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="wordpress portal">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">GLOBAL</span>
+            <span>EXPORT PORTAL</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">Javia International</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Multinational trade & export platform showcasing global product catalogues, downloadable specs, and buyer lead generation funnels.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>WordPress</span> • <span>ACF Pro</span> • <span>International SEO</span>
+          </div>
+        </div>
+        <a href="https://javiainternational.com/" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Website</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 10. NVD Technology -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="react portal">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">TECH CONSULTING</span>
+            <span>ENTERPRISE</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">NVD Technology</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Modern corporate tech consulting web app showcasing software engineering services, cloud migrations, and consultation funnels.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>Modern Frontend</span> • <span>Animations</span> • <span>Speed 95+</span>
+          </div>
+        </div>
+        <a href="https://nvdtechnology.com/" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Website</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 11. Wellness & Health 4 All -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="react">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">REACT JS</span>
+            <span>SPA PLATFORM</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">Wellness & Health 4 All</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Frontend SPA in React JS for international meditation retreats and wellness programs with modular cards and interactive discovery.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>React JS</span> • <span>SPA Architecture</span> • <span>Responsive</span>
+          </div>
+        </div>
+        <a href="https://wellnessandhealth4all.com/" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Platform</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 12. TRLIT Solutions Mail Client -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="react portal">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">NEXT.JS SSR</span>
+            <span>SAAS CLIENT</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">TRLIT Mail Client</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Webmail client engineered with Next JS server-side rendering for improved speed, email composer, and secure JWT authentication.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>Next.js</span> • <span>SSR</span> • <span>JWT Authentication</span>
+          </div>
+        </div>
+        <a href="https://mail.trlitsolutions.com" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Webmail</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 13. SparknFly (Canada) -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="shopify wordpress">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">CANADA (.CA)</span>
+            <span>CUSTOM PHP</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">SparknFly</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Online Canadian storefront coupled with a custom PHP admin panel for product inventory, user moderation, and site settings.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>Custom PHP Admin</span> • <span>WordPress</span> • <span>Filters</span>
+          </div>
+        </div>
+        <a href="https://sparknfly.ca" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Website</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 14. WebRX Pharma (UK) -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="wordpress shopify">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">UK (.CO.UK)</span>
+            <span>HEALTHCARE</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">WebRX Pharma</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            UK healthcare platform providing prescription medications and aesthetic solutions to medical practitioners and patients.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>WordPress</span> • <span>Healthcare UX</span> • <span>UK Compliance</span>
+          </div>
+        </div>
+        <a href="https://webrx.co.uk" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Website</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 15. La Fleur De Luxe -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="shopify wordpress">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">LUXURY BRAND</span>
+            <span>GIFTS</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">La Fleur De Luxe</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Luxury eCommerce platform specialized in preserved roses and customizable floral arrangement gift boxes for weddings and events.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>eCommerce</span> • <span>Box Builder UI</span> • <span>Luxury CRO</span>
+          </div>
+        </div>
+        <a href="https://lafleurdeluxe.com" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Website</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 16. Ethical Hire (Job Portal Australia) -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="portal wordpress">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">AUSTRALIA</span>
+            <span>JOB PORTAL</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">Ethical Hire</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            CodeIgniter 4 recruitment portal with role-based access for job seekers and employers, Stripe subscriptions, and Google Maps API.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>CodeIgniter 4</span> • <span>MySQL</span> • <span>Stripe Billing</span>
+          </div>
+        </div>
+        <a href="https://ethicalhire.com.au" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Portal</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 17. Patelco Credit Union (FinTech) -->
+      <div class="project-card p-6 rounded-2xl bg-theme-card border border-theme-border hover:border-theme-accent/60 transition-all flex flex-col justify-between group" data-category="portal react wordpress">
+        <div>
+          <div class="flex items-center justify-between text-xs font-mono text-theme-muted mb-4">
+            <span class="px-2 py-0.5 rounded bg-theme-bg text-theme-text">USA (.ORG)</span>
+            <span>BANKING</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white group-hover:text-theme-accent transition-colors">Patelco Credit Union</h3>
+          <p class="text-xs text-theme-text mt-2 leading-relaxed">
+            Angular Home Equity loan calculator with interactive sliders for loan amounts and interest percentages, paired with dynamic ACF CMS.
+          </p>
+          <div class="mt-4 pt-3 border-t border-theme-border/60 flex flex-wrap gap-1.5 font-mono text-[10px] text-theme-muted">
+            <span>Angular</span> • <span>WordPress</span> • <span>Loan Calculators</span>
+          </div>
+        </div>
+        <a href="https://patelco.org" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-theme-bg border border-theme-border group-hover:bg-theme-accent group-hover:text-black group-hover:border-theme-accent text-white text-xs font-semibold text-center transition-all flex items-center justify-center gap-2">
+          <span>Visit Official Site</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS & TRUST SECTION ================= -->
+  <section class="py-24 max-w-7xl mx-auto px-4 sm:px-8 border-b border-theme-border">
+    
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-mono uppercase tracking-wider text-theme-accent font-semibold">// 05. CLIENT FEEDBACK & TRUST</span>
+      <h2 class="font-heading font-semibold text-3xl sm:text-5xl text-white mt-2">What Collaborators Say</h2>
+      <p class="text-theme-text text-sm sm:text-base mt-3">
+        Feedback from founders, product managers, and engineering leads on delivered software products.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Testimonial 1 -->
+      <div class="p-8 rounded-2xl bg-theme-card border border-theme-border flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 text-theme-accent text-xs mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-sm text-theme-text leading-relaxed italic">
+            "Bhumika's technical depth with the Shopify ecosystem and AI integrations is exceptional. She delivered our ShopPilot AI app on schedule and cleared all official Shopify App Store security checks without friction."
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-theme-border/60">
+          <div class="font-heading font-semibold text-sm text-white">eCommerce App Lead</div>
+          <div class="text-xs font-mono text-theme-muted">Shopify Ecosystem Partner</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="p-8 rounded-2xl bg-theme-card border border-theme-border flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 text-theme-accent text-xs mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-sm text-theme-text leading-relaxed italic">
+            "On our Australian job portal, Bhumika seamlessly handled the complex CodeIgniter backend, role segregation, and Stripe subscriptions. Her code is clean, robust, and easy to maintain."
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-theme-border/60">
+          <div class="font-heading font-semibold text-sm text-white">Technical Director</div>
+          <div class="text-xs font-mono text-theme-muted">Digital Talent Agency, Australia</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="p-8 rounded-2xl bg-theme-card border border-theme-border flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 text-theme-accent text-xs mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-sm text-theme-text leading-relaxed italic">
+            "Our web application loading speed improved drastically after Bhumika's refactoring. She brings a rare combination of frontend finesse and backend structural reliability."
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-theme-border/60">
+          <div class="font-heading font-semibold text-sm text-white">Operations Manager</div>
+          <div class="text-xs font-mono text-theme-muted">European Retail Enterprise</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PROFESSIONAL WORK EXPERIENCE & CAREER PROGRESSION ================= -->
+  <section id="experience" class="py-24 max-w-4xl mx-auto px-4 sm:px-8 border-b border-theme-border">
+    
+    <div class="text-center mb-16">
+      <span class="text-xs font-mono uppercase tracking-wider text-theme-accent font-semibold">// 06. CAREER HISTORY</span>
+      <h2 class="font-heading font-semibold text-3xl sm:text-5xl text-white mt-2">Work Experience & Education</h2>
+    </div>
+
+    <div class="relative border-l-2 border-theme-border pl-8 space-y-12 ml-4">
+
+      <!-- Role 1: Webile Technologies -->
+      <div class="relative">
+        <div class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-theme-accent border-4 border-theme-bg shadow"></div>
+        <div class="p-8 rounded-2xl bg-theme-card border border-theme-border">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-theme-border mb-4">
+            <div>
+              <h3 class="font-heading font-bold text-xl text-white">Senior Software Engineer</h3>
+              <p class="text-xs font-mono text-theme-accent font-semibold uppercase mt-0.5">Webile Technologies Pvt. Ltd</p>
+            </div>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-theme-bg border border-theme-border text-theme-text self-start sm:self-auto">July 2022 – Present</span>
+          </div>
+
+          <div class="text-xs font-mono text-theme-muted mb-3 uppercase tracking-wider">RESPONSIBILITIES & ACHIEVEMENTS:</div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-theme-text leading-relaxed list-disc list-inside">
+            <li>Architected and deployed full-stack web applications for global enterprise clients across the United States, Australia, Ireland, and the United Kingdom.</li>
+            <li>Engineered AI-powered merchant solutions on the official Shopify App Store using App Bridge, Polaris UI, and secure webhook event handling.</li>
+            <li>Integrated payment infrastructure including Stripe subscriptions, recurring billing tiers, and PayPal checkout pipelines.</li>
+            <li>Conducted comprehensive Core Web Vitals optimization, reducing Largest Contentful Paint (LCP) and boosting client performance scores consistently above 90+.</li>
+          </ul>
+
+          <div class="mt-6 pt-4 border-t border-theme-border/60 flex flex-wrap gap-2 text-xs font-mono text-theme-muted">
+            <span class="text-theme-accent">Technologies:</span> React, Next.js, Angular, PHP, CodeIgniter 4, WordPress, Shopify, MySQL, Stripe API.
+          </div>
+        </div>
+      </div>
+
+      <!-- Role 2: LIOM IT Hub -->
+      <div class="relative">
+        <div class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-theme-muted border-4 border-theme-bg shadow"></div>
+        <div class="p-8 rounded-2xl bg-theme-card border border-theme-border">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-theme-border mb-4">
+            <div>
+              <h3 class="font-heading font-bold text-xl text-white">PHP Developer</h3>
+              <p class="text-xs font-mono text-theme-muted font-semibold uppercase mt-0.5">LIOM IT Hub Pvt. Ltd</p>
+            </div>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-theme-bg border border-theme-border text-theme-text self-start sm:self-auto">May 2021 – Dec 2021</span>
+          </div>
+
+          <div class="text-xs font-mono text-theme-muted mb-3 uppercase tracking-wider">RESPONSIBILITIES & ACHIEVEMENTS:</div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-theme-text leading-relaxed list-disc list-inside">
+            <li>Developed core backend logic, custom SQL queries, and relational schemas using PHP and MySQL.</li>
+            <li>Integrated frontend HTML5, Bootstrap, CSS3, and JavaScript components for cross-device compatibility.</li>
+            <li>Diagnosed and resolved cross-browser bugs, database indexing inefficiencies, and API data synchronization issues.</li>
+          </ul>
+
+          <div class="mt-6 pt-4 border-t border-theme-border/60 flex flex-wrap gap-2 text-xs font-mono text-theme-muted">
+            <span class="text-theme-accent">Technologies:</span> PHP, MySQL, MVC, JavaScript, HTML5, Bootstrap, AJAX.
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="relative">
+        <div class="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-theme-border border-4 border-theme-bg shadow"></div>
+        <div class="p-8 rounded-2xl bg-theme-card border border-theme-border">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <h3 class="font-heading font-bold text-xl text-white">Bachelor of Engineering in Computer Engineering</h3>
+              <p class="text-xs font-mono text-theme-accent mt-0.5">Apollo Institute of Engineering and Technology | GTU</p>
+            </div>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-theme-bg border border-theme-border text-theme-text self-start sm:self-auto">Graduated 2020</span>
+          </div>
+          <p class="text-xs text-theme-muted mt-3">
+            Comprehensive 4-year degree covering Algorithms, Data Structures, Relational Database Systems, Operating Systems, and Object-Oriented Software Engineering.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FREELANCE PRICING & RATE CARD (SECONDARY TO PROJECTS) ================= -->
+  <section id="pricing" class="py-24 max-w-7xl mx-auto px-4 sm:px-8 border-b border-theme-border">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-wider text-theme-accent font-semibold">// 07. FOR CLIENTS & FREELANCE PARTNERS</span>
+        <h2 class="font-heading font-semibold text-3xl sm:text-5xl text-white mt-2">Transparent Pricing Plans</h2>
+        <p class="text-theme-text text-sm sm:text-base mt-2">
+          Affordable, high-conversion rates for direct clients and startups. Fixed-scope packages or dedicated hourly work.
+        </p>
       </div>
 
       <!-- Currency Toggle -->
-      <div class="mt-6 md:mt-0 flex items-center gap-2 small-label text-xs">
-        <span class="text-espresso-muted">CURRENCY:</span>
-        <div class="inline-flex p-1 bg-champagne-warm border border-taupe-border rounded-lg">
-          <button id="currUSD" class="curr-btn px-4 py-1 rounded bg-burgundy text-champagne font-bold transition-all btn-text">USD ($)</button>
-          <button id="currINR" class="curr-btn px-4 py-1 text-espresso font-bold hover:text-burgundy transition-all btn-text">INR (₹)</button>
+      <div class="mt-6 md:mt-0 flex items-center gap-2 text-xs font-mono">
+        <span class="text-theme-muted uppercase">CURRENCY:</span>
+        <div class="inline-flex p-1 bg-theme-card border border-theme-border rounded-lg">
+          <button id="currUSD" class="curr-btn px-4 py-1 rounded bg-theme-accent text-black font-semibold transition-all">USD ($)</button>
+          <button id="currINR" class="curr-btn px-4 py-1 text-theme-text font-semibold hover:text-white transition-all">INR (₹)</button>
         </div>
       </div>
     </div>
 
-    <!-- Pricing Grid -->
+    <!-- Pricing Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <!-- Plan 1: WordPress & WooCommerce -->
-      <div class="p-8 bg-champagne-card rounded-2xl border border-taupe-border flex flex-col justify-between hover:border-burgundy/40 transition-all shadow-sm">
+      <!-- WordPress & WooCommerce -->
+      <div class="p-8 rounded-2xl bg-theme-card border border-theme-border flex flex-col justify-between hover:border-theme-borderlight transition-all">
         <div>
-          <div class="small-label text-[11px] text-espresso-muted mb-2">CMS & COMMERCE</div>
-          <h3 class="section-heading text-2xl text-mceblack">WordPress / WooCommerce</h3>
-          <p class="body-text text-xs text-espresso mt-2 mb-6">Business sites, custom themes, online stores</p>
+          <div class="text-xs font-mono uppercase tracking-wider text-theme-muted mb-2">CMS & STOREFRONTS</div>
+          <h3 class="font-heading font-semibold text-2xl text-white">WordPress / WooCommerce</h3>
+          <p class="text-xs text-theme-text mt-2 mb-6">Business sites, custom themes, online stores</p>
 
-          <div class="mb-6 pb-6 border-b border-taupe-border">
-            <span class="hero-heading text-4xl text-mceblack price-val" data-usd="$250" data-inr="₹18,000">$250</span>
-            <span class="small-label text-xs text-espresso-muted">/ starting</span>
+          <div class="mb-6 pb-6 border-b border-theme-border">
+            <span class="font-heading font-bold text-4xl text-white price-val" data-usd="$250" data-inr="₹18,000">$250</span>
+            <span class="text-xs font-mono text-theme-muted">/ starting</span>
           </div>
 
-          <ul class="space-y-3 body-text text-xs text-espresso leading-relaxed mb-8">
+          <ul class="space-y-3 text-xs text-theme-text mb-8">
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>Custom ACF Pro & Theme Development</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
-              <span>WooCommerce Store + Stripe/PayPal</span>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
+              <span>WooCommerce + Stripe/PayPal Gateway</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>Core Web Vitals & Speed Boost (90+)</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>100% Mobile & Cross-Browser Responsive</span>
             </li>
           </ul>
         </div>
-        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20WordPress/WooCommerce%20package" target="_blank" class="w-full py-3.5 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all">
+        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20WordPress/WooCommerce%20package" target="_blank" class="w-full py-3 rounded-xl bg-theme-bg border border-theme-border hover:border-theme-accent text-white hover:text-theme-accent text-xs font-semibold uppercase tracking-wider text-center transition-all">
           Choose WordPress
         </a>
       </div>
 
-      <!-- Plan 2: Shopify Stores & Apps (POPULAR / BURGUNDY ACCENT) -->
-      <div class="p-8 bg-mceblack-card text-champagne rounded-2xl border-2 border-burgundy flex flex-col justify-between shadow-2xl relative scale-[1.02]">
-        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-burgundy text-champagne small-label text-[10px] font-bold rounded-full shadow">
+      <!-- Shopify & AI Apps (POPULAR) -->
+      <div class="p-8 rounded-2xl bg-theme-card border-2 border-theme-accent flex flex-col justify-between shadow-xl relative scale-[1.02]">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-theme-accent text-black text-[10px] font-mono font-bold uppercase tracking-widest rounded-full shadow">
           MOST POPULAR
         </div>
         <div>
-          <div class="small-label text-[11px] text-burgundy-light mb-2">SHOPIFY & AI</div>
-          <h3 class="section-heading text-2xl text-champagne">Shopify Stores & Apps</h3>
-          <p class="body-text text-xs text-taupe mt-2 mb-6">Custom Liquid, AI integrations & App Store apps</p>
+          <div class="text-xs font-mono uppercase tracking-wider text-theme-accent mb-2">SHOPIFY & APPS</div>
+          <h3 class="font-heading font-semibold text-2xl text-white">Shopify Stores & Apps</h3>
+          <p class="text-xs text-theme-text mt-2 mb-6">Custom Liquid, AI integrations & App Store apps</p>
 
-          <div class="mb-6 pb-6 border-b border-white/10">
-            <span class="hero-heading text-4xl text-champagne price-val" data-usd="$450" data-inr="₹35,000">$450</span>
-            <span class="small-label text-xs text-taupe">/ starting</span>
+          <div class="mb-6 pb-6 border-b border-theme-border">
+            <span class="font-heading font-bold text-4xl text-white price-val" data-usd="$450" data-inr="₹35,000">$450</span>
+            <span class="text-xs font-mono text-theme-muted">/ starting</span>
           </div>
 
-          <ul class="space-y-3 body-text text-xs text-taupe-light leading-relaxed mb-8">
+          <ul class="space-y-3 text-xs text-theme-text mb-8">
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy-light mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>Custom Shopify App (Public or Private)</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy-light mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>AI Integration (like ShopPilot AI)</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy-light mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>Polaris UI + App Bridge + Webhooks</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy-light mt-0.5"></i>
-              <span>Custom Liquid theme sections & conversion UI</span>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
+              <span>Custom Liquid theme sections & CRO</span>
             </li>
           </ul>
         </div>
-        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20Shopify%20App%20Development" target="_blank" class="w-full py-3.5 rounded-xl bg-burgundy hover:bg-burgundy-hover text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all shadow-md">
+        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20Shopify%20App%20Development" target="_blank" class="w-full py-3 rounded-xl bg-theme-accent hover:bg-theme-accenthover text-black text-xs font-semibold uppercase tracking-wider text-center transition-all shadow-md">
           Choose Shopify
         </a>
       </div>
 
-      <!-- Plan 3: React & Next.js -->
-      <div class="p-8 bg-champagne-card rounded-2xl border border-taupe-border flex flex-col justify-between hover:border-burgundy/40 transition-all shadow-sm">
+      <!-- React & Next.js -->
+      <div class="p-8 rounded-2xl bg-theme-card border border-theme-border flex flex-col justify-between hover:border-theme-borderlight transition-all">
         <div>
-          <div class="small-label text-[11px] text-espresso-muted mb-2">FRONTEND & SSR</div>
-          <h3 class="section-heading text-2xl text-mceblack">React & Next.js</h3>
-          <p class="body-text text-xs text-espresso mt-2 mb-6">Fast SPAs, server-rendered SaaS apps, dashboards</p>
+          <div class="text-xs font-mono uppercase tracking-wider text-theme-muted mb-2">FRONTEND & SSR</div>
+          <h3 class="font-heading font-semibold text-2xl text-white">React & Next.js</h3>
+          <p class="text-xs text-theme-text mt-2 mb-6">Fast SPAs, server-rendered SaaS apps, dashboards</p>
 
-          <div class="mb-6 pb-6 border-b border-taupe-border">
-            <span class="hero-heading text-4xl text-mceblack price-val" data-usd="$500" data-inr="₹38,000">$500</span>
-            <span class="small-label text-xs text-espresso-muted">/ starting</span>
+          <div class="mb-6 pb-6 border-b border-theme-border">
+            <span class="font-heading font-bold text-4xl text-white price-val" data-usd="$500" data-inr="₹38,000">$500</span>
+            <span class="text-xs font-mono text-theme-muted">/ starting</span>
           </div>
 
-          <ul class="space-y-3 body-text text-xs text-espresso leading-relaxed mb-8">
+          <ul class="space-y-3 text-xs text-theme-text mb-8">
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>Next.js App Router with Server-Side Rendering</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>Modular React Components & Tailwind CSS</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
-              <span>API Integration (REST / GraphQL / JWT Auth)</span>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
+              <span>API Integration (REST / GraphQL / Auth)</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>Interactive Filters, Dashboards & State</span>
             </li>
           </ul>
         </div>
-        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20a%20React/Next.js%20project" target="_blank" class="w-full py-3.5 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all">
+        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20a%20React/Next.js%20project" target="_blank" class="w-full py-3 rounded-xl bg-theme-bg border border-theme-border hover:border-theme-accent text-white hover:text-theme-accent text-xs font-semibold uppercase tracking-wider text-center transition-all">
           Choose React / Next.js
         </a>
       </div>
 
-      <!-- Plan 4: Full-Stack Portals -->
-      <div class="p-8 bg-champagne-card rounded-2xl border border-taupe-border flex flex-col justify-between hover:border-burgundy/40 transition-all shadow-sm">
+      <!-- Full-Stack Portals -->
+      <div class="p-8 rounded-2xl bg-theme-card border border-theme-border flex flex-col justify-between hover:border-theme-borderlight transition-all">
         <div>
-          <div class="small-label text-[11px] text-espresso-muted mb-2">FULL-STACK & MVC</div>
-          <h3 class="section-heading text-2xl text-mceblack">Full-Stack Portals</h3>
-          <p class="body-text text-xs text-espresso mt-2 mb-6">CodeIgniter 4, Angular calculators, job boards</p>
+          <div class="text-xs font-mono uppercase tracking-wider text-theme-muted mb-2">FULL-STACK & MVC</div>
+          <h3 class="font-heading font-semibold text-2xl text-white">Full-Stack Portals</h3>
+          <p class="text-xs text-theme-text mt-2 mb-6">CodeIgniter 4, Angular calculators, job boards</p>
 
-          <div class="mb-6 pb-6 border-b border-taupe-border">
-            <span class="hero-heading text-4xl text-mceblack price-val" data-usd="$750" data-inr="₹55,000">$750</span>
-            <span class="small-label text-xs text-espresso-muted">/ starting</span>
+          <div class="mb-6 pb-6 border-b border-theme-border">
+            <span class="font-heading font-bold text-4xl text-white price-val" data-usd="$750" data-inr="₹55,000">$750</span>
+            <span class="text-xs font-mono text-theme-muted">/ starting</span>
           </div>
 
-          <ul class="space-y-3 body-text text-xs text-espresso leading-relaxed mb-8">
+          <ul class="space-y-3 text-xs text-theme-text mb-8">
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>Custom MVC architecture & MySQL schema</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>Role-Based User Permissions (RBAC)</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>Stripe Subscriptions & Google Maps API</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-check text-burgundy mt-0.5"></i>
+              <i class="fa-solid fa-check text-theme-accent mt-0.5"></i>
               <span>Comprehensive Admin Control Panels</span>
             </li>
           </ul>
         </div>
-        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20a%20Full-Stack%20Custom%20Portal" target="_blank" class="w-full py-3.5 rounded-xl bg-espresso hover:bg-burgundy text-champagne btn-text text-xs uppercase tracking-wider text-center transition-all">
+        <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I'm%20interested%20in%20a%20Full-Stack%20Custom%20Portal" target="_blank" class="w-full py-3 rounded-xl bg-theme-bg border border-theme-border hover:border-theme-accent text-white hover:text-theme-accent text-xs font-semibold uppercase tracking-wider text-center transition-all">
           Choose Custom Portal
         </a>
       </div>
 
     </div>
 
-    <!-- Hourly & Retainer Banner (Espresso & Burgundy) -->
-    <div class="mt-12 p-8 rounded-2xl bg-espresso-deep text-champagne flex flex-col md:flex-row items-center justify-between gap-6 border border-espresso">
+    <!-- Hourly & Retainer Banner -->
+    <div class="mt-12 p-8 rounded-2xl bg-theme-card border border-theme-border flex flex-col md:flex-row items-center justify-between gap-6">
       <div>
-        <div class="inline-block editorial-tag-dark text-[10px] px-2.5 py-0.5 text-champagne small-label mb-2">HOURLY & RETAINER CONTRACTS</div>
-        <h4 class="section-heading text-xl sm:text-2xl text-champagne">Need Ongoing Dedicated Development?</h4>
-        <p class="body-text text-xs sm:text-sm text-taupe-light mt-1 max-w-2xl">
-          I offer dedicated hourly rates at <strong>$18 – $28 / hour</strong> (or <strong>₹900 – ₹1,500 / hr</strong>), as well as monthly maintenance retainers covering bug fixes, feature expansion, and speed monitoring.
+        <div class="inline-block text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded bg-theme-accent/10 border border-theme-accent/30 text-theme-accent mb-2">
+          DEDICATED HOURLY & RETAINER CONTRACTS
+        </div>
+        <h4 class="font-heading font-bold text-xl sm:text-2xl text-white">Need Ongoing Development or Hourly Sprints?</h4>
+        <p class="text-xs sm:text-sm text-theme-text mt-1 max-w-2xl">
+          I provide dedicated contract services at <strong>$18 – $28 / hour</strong> (or <strong>₹900 – ₹1,500 / hr</strong>), as well as monthly maintenance retainers covering bug fixes, feature expansion, and speed monitoring.
         </p>
       </div>
-      <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I%20would%20like%20to%20discuss%20a%20retainer%20or%20hourly%20contract" target="_blank" class="whitespace-nowrap px-6 py-3.5 rounded-xl bg-burgundy hover:bg-burgundy-hover text-champagne btn-text text-xs uppercase tracking-wider transition-all shadow-md">
+      <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20I%20would%20like%20to%20discuss%20a%20retainer%20or%20hourly%20contract" target="_blank" class="whitespace-nowrap px-6 py-3.5 rounded-xl bg-theme-accent hover:bg-theme-accenthover text-black text-xs font-semibold uppercase tracking-wider transition-all shadow-md">
         Discuss Retainer
       </a>
     </div>
 
   </section>
 
-  <!-- ================= EXPERIENCE & TIMELINE ================= -->
-  <section id="experience" class="py-24 bg-champagne-warm/50 border-t border-taupe-border">
-    <div class="max-w-4xl mx-auto px-4 sm:px-8">
-      
-      <div class="text-center mb-16">
-        <span class="small-label text-xs text-burgundy font-bold">/05. TRACK RECORD</span>
-        <h2 class="section-heading text-4xl text-mceblack mt-2">Work Experience</h2>
-      </div>
-
-      <div class="space-y-8">
+  <!-- ================= CONTACT & CALL TO ACTION ================= -->
+  <section id="contact" class="py-24 max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="p-8 sm:p-14 rounded-3xl bg-theme-card border border-theme-border glow-lime">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
-        <!-- Experience 1 -->
-        <div class="p-8 bg-champagne-light rounded-2xl border border-taupe-border shadow-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-taupe-border mb-4">
-            <div>
-              <h3 class="section-heading text-xl text-mceblack">Senior Software Engineer</h3>
-              <p class="small-label text-xs text-burgundy font-bold mt-0.5">Webile Technologies Pvt. Ltd</p>
-            </div>
-            <span class="small-label text-xs px-3 py-1 editorial-tag self-start sm:self-auto">July 2022 – Present</span>
+        <div class="lg:col-span-7">
+          <span class="text-xs font-mono uppercase tracking-wider text-theme-accent font-semibold">// CONNECT DIRECTLY</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-5xl text-white mt-2 leading-tight">
+            Let's Build Something High-Performing Together.
+          </h2>
+          <p class="text-sm text-theme-text mt-4 max-w-xl">
+            Whether you are a recruiter looking for an experienced full-stack engineer or a client looking to launch an MVP or Shopify solution, I'm ready to contribute.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20let's%20connect%20regarding%20an%20opportunity" target="_blank" class="px-6 py-3.5 rounded-xl bg-theme-accent hover:bg-theme-accenthover text-black font-semibold text-xs uppercase tracking-wider transition-all flex items-center gap-2 shadow-lg">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>WhatsApp (+91-8780432116)</span>
+            </a>
+            <a href="mailto:bhumikapatel8511@gmail.com" class="px-6 py-3.5 rounded-xl bg-theme-bg border border-theme-border hover:border-theme-accent text-white font-semibold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-sm"></i>
+              <span>bhumikapatel8511@gmail.com</span>
+            </a>
           </div>
-          <ul class="space-y-2.5 body-text text-xs sm:text-sm text-espresso leading-relaxed list-disc list-inside">
-            <li>Lead full-stack engineering on high-impact PHP, WordPress, React, and Angular applications.</li>
-            <li>Built custom plugins, integrated Stripe payments, and architected role-based user access controls.</li>
-            <li>Collaborated cross-functionally with UI/UX designers and international product teams across US, UK, and Australia.</li>
-            <li>Delivered speed optimization for client portals, consistently scoring 90+ on Google Core Web Vitals.</li>
-          </ul>
         </div>
 
-        <!-- Experience 2 -->
-        <div class="p-8 bg-champagne-light rounded-2xl border border-taupe-border shadow-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-taupe-border mb-4">
-            <div>
-              <h3 class="section-heading text-xl text-mceblack">PHP Developer</h3>
-              <p class="small-label text-xs text-espresso-muted font-bold mt-0.5">LIOM IT Hub Pvt. Ltd</p>
-            </div>
-            <span class="small-label text-xs px-3 py-1 bg-white/70 border border-taupe-border rounded self-start sm:self-auto">May 2021 – Dec 2021</span>
+        <div class="lg:col-span-5 space-y-4 font-mono text-xs text-theme-text">
+          <div class="p-4 rounded-xl bg-theme-bg/80 border border-theme-border flex items-center justify-between">
+            <span class="text-theme-muted uppercase">Phone</span>
+            <a href="tel:+918780432116" class="text-white hover:text-theme-accent font-semibold">+91-8780432116</a>
           </div>
-          <ul class="space-y-2.5 body-text text-xs sm:text-sm text-espresso leading-relaxed list-disc list-inside">
-            <li>Developed backend modules, database structures, and frontend integrations using PHP and MySQL.</li>
-            <li>Engineered custom query optimizations and resolved cross-browser responsiveness challenges.</li>
-          </ul>
-        </div>
-
-        <!-- Education -->
-        <div class="p-8 bg-champagne-light rounded-2xl border border-taupe-border shadow-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <div>
-              <h3 class="section-heading text-xl text-mceblack">Bachelor of Engineering (Computer Engineering)</h3>
-              <p class="body-text text-xs text-espresso-muted mt-0.5">Apollo Institute of Engineering and Technology | GTU</p>
-            </div>
-            <span class="small-label text-xs px-3 py-1 bg-white/70 border border-taupe-border rounded self-start sm:self-auto">Graduated 2020</span>
+          <div class="p-4 rounded-xl bg-theme-bg/80 border border-theme-border flex items-center justify-between">
+            <span class="text-theme-muted uppercase">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/bhumika-patel" target="_blank" class="text-theme-accent hover:underline">/in/bhumika-patel</a>
+          </div>
+          <div class="p-4 rounded-xl bg-theme-bg/80 border border-theme-border flex items-center justify-between">
+            <span class="text-theme-muted uppercase">GitHub</span>
+            <a href="https://github.com/bhumika081" target="_blank" class="text-theme-accent hover:underline">github.com/bhumika081</a>
+          </div>
+          <div class="p-4 rounded-xl bg-theme-bg/80 border border-theme-border flex items-center justify-between">
+            <span class="text-theme-muted uppercase">Location</span>
+            <span class="text-white">India (Available for Remote Global Roles)</span>
           </div>
         </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- ================= GIANT SIGNATURE FOOTER ================= -->
-  <footer class="bg-mceblack text-champagne pt-20 pb-12 noise-bg border-t border-espresso-light">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
-      
-      <!-- Top Section with CTA -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 pb-16 border-b border-espresso-light items-center">
-        <div>
-          <span class="small-label text-xs text-burgundy-light font-bold">// GET IN TOUCH</span>
-          <h2 class="hero-heading text-3xl sm:text-5xl text-champagne mt-2 leading-tight">
-            HAVE A PROJECT IN MIND?<br />LET'S BUILD SOMETHING GREAT.
-          </h2>
-        </div>
-
-        <div class="flex flex-wrap gap-4 lg:justify-end">
-          <a href="https://wa.me/918780432116?text=Hi%20Bhumika,%20let's%20discuss%20a%20project" target="_blank" class="px-7 py-4 rounded-xl bg-burgundy hover:bg-burgundy-hover text-champagne btn-text text-xs uppercase tracking-wider transition-all flex items-center gap-2 shadow-lg">
-            <i class="fa-brands fa-whatsapp text-base"></i>
-            <span>WhatsApp (+91-8780432116)</span>
-          </a>
-          <a href="mailto:bhumikapatel8511@gmail.com" class="px-7 py-4 rounded-xl border border-taupe/40 hover:bg-champagne hover:text-mceblack text-champagne btn-text text-xs uppercase tracking-wider transition-all flex items-center gap-2">
-            <i class="fa-solid fa-envelope text-sm"></i>
-            <span>bhumikapatel8511@gmail.com</span>
-          </a>
-        </div>
+  <!-- ================= REFINED FOOTER ================= -->
+  <footer class="py-12 border-t border-theme-border text-xs text-theme-muted font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © <span id="currentYear"></span> Bhumika Patel. Engineered with React, Next.js & modern standards.
       </div>
-
-      <!-- Giant Signature Typography -->
-      <div class="py-16 text-center overflow-hidden">
-        <h1 class="hero-heading text-5xl sm:text-8xl md:text-9xl tracking-tight text-champagne/95 uppercase hover:text-burgundy transition-colors cursor-default select-none">
-          BHUMIKA PATEL<span class="text-burgundy">.</span>
-        </h1>
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/bhumika081" target="_blank" class="hover:text-theme-accent transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/bhumika-patel" target="_blank" class="hover:text-theme-accent transition-colors">LinkedIn</a>
+        <a href="mailto:bhumikapatel8511@gmail.com" class="hover:text-theme-accent transition-colors">Email</a>
+        <a href="https://wa.me/918780432116" target="_blank" class="hover:text-theme-accent transition-colors">WhatsApp</a>
       </div>
-
-      <!-- Bottom Credits & Links -->
-      <div class="pt-8 border-t border-espresso-light flex flex-col sm:flex-row items-center justify-between gap-4 small-label text-xs text-taupe">
-        <div>
-          © <span id="currentYear"></span> Bhumika Patel. All rights reserved.
-        </div>
-        <div class="flex items-center gap-6 nav-text text-xs">
-          <a href="https://github.com/bhumika081" target="_blank" class="hover:text-burgundy-light transition-colors">GitHub: @bhumika081</a>
-          <a href="mailto:bhumikapatel8511@gmail.com" class="hover:text-burgundy-light transition-colors">Email</a>
-          <a href="tel:+918780432116" class="hover:text-burgundy-light transition-colors">Phone</a>
-          <a href="https://wa.me/918780432116" target="_blank" class="hover:text-burgundy-light transition-colors">WhatsApp</a>
-        </div>
-      </div>
-
     </div>
   </footer>
 
@@ -1371,13 +1472,12 @@
 
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Active button styles
         filterButtons.forEach(b => {
-          b.classList.remove('bg-burgundy', 'text-champagne');
-          b.classList.add('bg-espresso', 'text-taupe-light');
+          b.classList.remove('bg-theme-accent', 'text-black', 'active');
+          b.classList.add('bg-theme-card', 'border', 'border-theme-border', 'text-theme-text');
         });
-        btn.classList.add('bg-burgundy', 'text-champagne');
-        btn.classList.remove('bg-espresso', 'text-taupe-light');
+        btn.classList.add('bg-theme-accent', 'text-black', 'active');
+        btn.classList.remove('bg-theme-card', 'border', 'border-theme-border', 'text-theme-text');
 
         const filterValue = btn.getAttribute('data-filter');
 
@@ -1398,10 +1498,10 @@
     const priceElements = document.querySelectorAll('.price-val');
 
     btnUSD.addEventListener('click', () => {
-      btnUSD.classList.add('bg-burgundy', 'text-champagne');
-      btnUSD.classList.remove('text-espresso');
-      btnINR.classList.remove('bg-burgundy', 'text-champagne');
-      btnINR.classList.add('text-espresso');
+      btnUSD.classList.add('bg-theme-accent', 'text-black');
+      btnUSD.classList.remove('text-theme-text');
+      btnINR.classList.remove('bg-theme-accent', 'text-black');
+      btnINR.classList.add('text-theme-text');
 
       priceElements.forEach(el => {
         el.textContent = el.getAttribute('data-usd');
@@ -1409,10 +1509,10 @@
     });
 
     btnINR.addEventListener('click', () => {
-      btnINR.classList.add('bg-burgundy', 'text-champagne');
-      btnINR.classList.remove('text-espresso');
-      btnUSD.classList.remove('bg-burgundy', 'text-champagne');
-      btnUSD.classList.add('text-espresso');
+      btnINR.classList.add('bg-theme-accent', 'text-black');
+      btnINR.classList.remove('text-theme-text');
+      btnUSD.classList.remove('bg-theme-accent', 'text-black');
+      btnUSD.classList.add('text-theme-text');
 
       priceElements.forEach(el => {
         el.textContent = el.getAttribute('data-inr');
