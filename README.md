@@ -74,7 +74,6 @@ git push -u origin main
   - Interactive **USD ($)** and **INR (₹)** currency switcher.
   - Transparent packages for WordPress, Shopify/AI Apps, React/Next.js, and Full-Stack portals.
 - **One-Click Contact Integration**:
-  - Direct WhatsApp chat link (`+91-8780432116`) pre-filled with inquiry text.
-  - Direct email (`bhumikapatel8511@gmail.com`) and phone links.
+  - Direct email (`bhumikapatel8511@gmail.com`) and LinkedIn connection.
 - **Dark / Light Mode**: Automatically detects system preferences with a manual toggle.
 - **100% Mobile Responsive**: Styled with Tailwind CSS CDN and FontAwesome.

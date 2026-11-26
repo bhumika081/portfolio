@@ -77,8 +77,6 @@ def create_resume():
     p_contact.paragraph_format.space_after = Pt(6)
     p_contact.alignment = WD_ALIGN_PARAGRAPH.CENTER
     contact_parts = [
-        ("📞 +91-8780432116", False),
-        ("  |  ", False),
         ("✉ bhumikapatel8511@gmail.com", False),
         ("  |  ", False),
         ("🌐 bhumika081.github.io/portfolio", False),
