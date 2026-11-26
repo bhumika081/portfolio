@@ -2,58 +2,47 @@
 
 This repository contains the source code for the personal portfolio of **Bhumika Patel (Senior Software Engineer)**. It is built as a zero-dependency, ultra-fast static website designed for immediate deployment on **GitHub Pages**.
 
+- **GitHub Profile**: [@bhumika081](https://github.com/bhumika081)
+- **Live Target**: `https://bhumika081.github.io/portfolio/` (or `https://bhumika081.github.io/`)
+
 ---
 
-## 🚀 Live Demo Deployment Steps (GitHub Pages)
+## 🚀 How to Launch on GitHub Pages (for @bhumika081)
 
-You can launch this portfolio live on the web in **under 2 minutes** using GitHub Pages for free:
+Follow these exact steps:
 
-### Method 1: Using Terminal / Git Commands
+### Option A: Create a Standard Portfolio Repository (`portfolio`)
 
-Open your terminal or PowerShell inside `d:\Bhumika Patel` and run:
+1. Open [github.com/new](https://github.com/new) in your browser.
+2. Set **Repository name** to: `portfolio`
+3. Set visibility to **Public**.
+4. Leave "Add a README" **unchecked**.
+5. Click **Create repository**.
+6. Run the following terminal commands inside `d:\Bhumika Patel`:
 
 ```bash
-# 1. Initialize Git in the folder
-git init
-
-# 2. Add all files and make initial commit
-git add .
-git commit -m "Initial commit - Bhumika Patel Portfolio"
-
-# 3. Rename branch to main
-git branch -M main
-
-# 4. Link to your GitHub repository (replace with your repo URL)
-# Example: https://github.com/bhumikapatel/portfolio.git
-git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPOSITORY_NAME>.git
-
-# 5. Push your code
+git remote add origin https://github.com/bhumika081/portfolio.git
 git push -u origin main
 ```
 
----
-
-### Method 2: Via GitHub Web Interface (No command line needed)
-
-1. Go to [github.com](https://github.com) and create a new public repository (e.g., `portfolio` or `bhumikapatel.github.io`).
-2. Click **"uploading an existing file"**.
-3. Drag and drop `index.html` and `README.md` into GitHub.
-4. Click **Commit changes**.
+7. Enable GitHub Pages:
+   - Go to your repository on GitHub: `https://github.com/bhumika081/portfolio`
+   - Click **Settings** ➔ **Pages** (on the left menu)
+   - Under **Build and deployment > Branch**, choose **`main`** and folder **`/ (root)`**
+   - Click **Save**.
+   - Your live URL will be: **`https://bhumika081.github.io/portfolio/`**
 
 ---
 
-## 🌐 Enable GitHub Pages (To Make it Live)
-
-Once your code is in your GitHub repository:
-
-1. In your GitHub repository, click on the **Settings** tab (gear icon at the top right).
-2. On the left sidebar, click on **Pages** (under the "Code and automation" section).
-3. Under **Build and deployment** > **Branch**:
-   - Select **Branch**: `main` (or `master`)
-   - Select folder: `/ (root)`
-4. Click **Save**.
-5. Wait 30–60 seconds. Refresh the page. You will see a banner:
-   > **"Your site is live at `https://<YOUR_USERNAME>.github.io/<REPO_NAME>/`"**
+### Option B: Make it your Main Root Domain (`bhumika081.github.io`)
+If you name your new repository exactly `bhumika081.github.io`:
+1. Run:
+```bash
+git remote add origin https://github.com/bhumika081/bhumika081.github.io.git
+git push -u origin main
+```
+2. Your live website will automatically be available at:
+   **`https://bhumika081.github.io`** (without any subfolder!)
 
 ---
 
