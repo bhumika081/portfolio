@@ -83,6 +83,8 @@ def create_resume():
         ("  |  ", False),
         ("🌐 bhumika081.github.io/portfolio", False),
         ("  |  ", False),
+        ("🔗 linkedin.com/in/bhumika-patel-4509771b6", False),
+        ("  |  ", False),
         ("💻 github.com/bhumika081", False),
         ("  |  ", False),
         ("📍 Ahmedabad, Gujarat, India", False)

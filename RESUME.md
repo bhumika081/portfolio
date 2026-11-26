@@ -2,7 +2,7 @@
 **Senior Software Engineer | Full-Stack & eCommerce Solutions**  
 📍 Ahmedabad, Gujarat, India  
 📞 [+91-8780432116](tel:+918780432116) | ✉️ [bhumikapatel8511@gmail.com](mailto:bhumikapatel8511@gmail.com)  
-🌐 [Live Portfolio](https://bhumika081.github.io/portfolio/) | 💻 [GitHub Profile](https://github.com/bhumika081) | 🔗 [LinkedIn](https://www.linkedin.com/in/bhumika-patel)
+🌐 [Live Portfolio](https://bhumika081.github.io/portfolio/) | 💻 [GitHub Profile](https://github.com/bhumika081) | 🔗 [LinkedIn](https://www.linkedin.com/in/bhumika-patel-4509771b6)
 
 ---
 
