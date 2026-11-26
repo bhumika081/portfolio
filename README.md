@@ -49,9 +49,10 @@ git push -u origin main
 ## 📂 Features Included
 
 - **Hero & Profile**: Showcasing 4+ years of full-stack, eCommerce & CMS development experience.
-- **18 Live Production Projects**:
+- **19 Live Production Projects**:
   - **ShopPilot AI** (Official Shopify App Store app)
   - **The Spa of Charleston** (Luxury Day Spa & Appointment Booking, USA)
+  - **Ausstellungen – Gitta Marquardt-Baladurage** (German Fine Arts & Exhibition Showcase, WordPress)
   - **Retail Matchmaker** (B2B Retail & Brand Matchmaking Platform)
   - **Halal 4 All Shop** (Halal Certified Food & Grocery eCommerce)
   - **My Jewellery Story** (Luxury Gemstones & Fine Jewelry, Australia)
